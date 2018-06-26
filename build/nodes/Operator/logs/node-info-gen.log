@@ -1,0 +1,14 @@
+2018-06-09 15:27:17,843 main WARN Unable to instantiate org.fusesource.jansi.WindowsAnsiOutputStream
+2018-06-09 15:27:17,852 main WARN Unable to instantiate org.fusesource.jansi.WindowsAnsiOutputStream
+
+   ______               __
+  / ____/     _________/ /___ _
+ / /     __  / ___/ __  / __ `/         There are two rules for financial success:
+/ /___  /_/ / /  / /_/ / /_/ /          1) Don't tell everything you know.
+\____/     /_/   \__,_/\__,_/
+
+--- Corda Open Source 3.1-corda (d193dd8) -----------------------------------------------
+
+
+Logs can be found in                    : D:\ubuntu\Turnover-Box-Chain\build\nodes\Operator\logs
+Database connection url is              : jdbc:h2:tcp://134.61.144.64:50333/node
