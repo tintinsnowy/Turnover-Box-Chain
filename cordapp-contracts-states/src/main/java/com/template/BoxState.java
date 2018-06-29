@@ -11,54 +11,61 @@ import net.corda.finance.contracts.CommercialPaper;
 import java.time.Instant;
 import java.util.Currency;
 import java.util.List;
+import java.lang.*;
+
 
 
 public class BoxState implements OwnableState {
 
-    private PartyAndReference issuance;
+    //private PartyAndReference issuance;
     private AbstractParty owner;
-    private Amount<Issued<Currency>> faceValue;
+    //private Amount<Issued<Currency>> faceValue;
+    private double faceValue;
     //private Instant maturityDate;
     private String productType;
     private double price;
+    private Integer num;
 
-    public BoxState() {
+    public BoxState( AnonymousParty owner, String productType, double price) {
     }  // For serialization
 
-    public BoxState(PartyAndReference issuance, AbstractParty owner, Amount<Issued<Currency>> faceValue, //, Instant maturityDate) {
-                    String productType, double price ){
-        this.issuance = issuance;
+    public BoxState( AbstractParty owner, //Amount<Issued<Currency>> faceValue , Instant maturityDate) {
+                    String productType, double price){
+
+        //this.issuance = issuance;
+
         this.owner = owner;
-        this.faceValue = faceValue;
+        this.faceValue = price * num;
         //this.maturityDate = maturityDate;
         this.productType = productType;
         this.price = price;
+        //this.num = num;
     }
 
     public BoxState copy() {
-        return new BoxState(this.issuance, this.owner, this.faceValue, this.productType,this.price);
+        return new BoxState(this.owner, this.productType,this.price);
     }
 
     public BoxState withoutOwner() {
-        return new BoxState(this.issuance, new AnonymousParty(NullKeys.NullPublicKey.INSTANCE), this.faceValue,
+        return new BoxState(new AnonymousParty(NullKeys.NullPublicKey.INSTANCE),
                 this.productType, this.price);
     }
 
     @Override
     public CommandAndState withNewOwner(AbstractParty newOwner) {
         return new CommandAndState(new CommercialPaper.Commands.Move(),
-                new BoxState(this.issuance, newOwner, this.faceValue,this.productType, this.price));
+                new BoxState(newOwner, this.productType, this.price));
     }
 
-    public PartyAndReference getIssuance() {
+   /* public PartyAndReference getIssuance() {
         return issuance;
-    }
+    }*/
 
     public AbstractParty getOwner() {
         return owner;
     }
 
-    public Amount<Issued<Currency>> getFaceValue() {
+    public double getFaceValue() {
         return faceValue;
     }
 //
@@ -66,8 +73,9 @@ public class BoxState implements OwnableState {
 //        return maturityDate;
 //    }
 
+ /*
     @Override
-    public boolean equals(Object o) {
+   public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
@@ -77,14 +85,16 @@ public class BoxState implements OwnableState {
         if (owner != null ? !owner.equals(state.owner) : state.owner != null) return false;
         return !(faceValue != null ? !faceValue.equals(state.faceValue) : state.faceValue != null);
         //!(maturityDate != null ? !maturityDate.equals(state.maturityDate) : state.maturityDate != null);
-    }
+    }*/
 
     @Override
     public int hashCode() {
-        int result = issuance != null ? issuance.hashCode() : 0;
-        result = 31 * result + (owner != null ? owner.hashCode() : 0);
-        result = 31 * result + (faceValue != null ? faceValue.hashCode() : 0);
+        //int result = issuance != null ? issuance.hashCode() : 0;
+        int result =  owner != null ? owner.hashCode() : 0;
+        //result = 31 * result + (owner != null ? owner.hashCode() : 0);
+        result = 31 * result + (price >0 ? Double.toString(price).hashCode() : 0);
         //result = 31 * result + (maturityDate != null ? maturityDate.hashCode() : 0);
+        result = 31 * result + (num >0 ? Integer.toString(num).hashCode() : 0);
         return result;
     }
 
