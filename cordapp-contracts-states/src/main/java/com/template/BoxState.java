@@ -6,6 +6,7 @@ import net.corda.core.contracts.*;
 import net.corda.core.crypto.NullKeys;
 import net.corda.core.identity.AbstractParty;
 import net.corda.core.identity.AnonymousParty;
+import net.corda.core.serialization.ConstructorForDeserialization;
 import net.corda.finance.contracts.CommercialPaper;
 
 import java.time.Instant;
@@ -20,22 +21,20 @@ public class BoxState implements OwnableState {
     //private PartyAndReference issuance;
     private AbstractParty owner;
     //private Amount<Issued<Currency>> faceValue;
-    private double faceValue;
     //private Instant maturityDate;
     private String productType;
     private double price;
-    private Integer num;
 
-    public BoxState( AnonymousParty owner, String productType, double price) {
-    }  // For serialization
+   //What is series
+//    public BoxState( AnonymousParty owner, String productType, double price) {
+//    }  // For serialization
 
+    @ConstructorForDeserialization
     public BoxState( AbstractParty owner, //Amount<Issued<Currency>> faceValue , Instant maturityDate) {
                     String productType, double price){
 
         //this.issuance = issuance;
-
         this.owner = owner;
-        this.faceValue = price * num;
         //this.maturityDate = maturityDate;
         this.productType = productType;
         this.price = price;
@@ -57,21 +56,10 @@ public class BoxState implements OwnableState {
                 new BoxState(newOwner, this.productType, this.price));
     }
 
-   /* public PartyAndReference getIssuance() {
-        return issuance;
-    }*/
 
     public AbstractParty getOwner() {
         return owner;
     }
-
-    public double getFaceValue() {
-        return faceValue;
-    }
-//
-//    public Instant getMaturityDate() {
-//        return maturityDate;
-//    }
 
  /*
     @Override
@@ -94,7 +82,6 @@ public class BoxState implements OwnableState {
         //result = 31 * result + (owner != null ? owner.hashCode() : 0);
         result = 31 * result + (price >0 ? Double.toString(price).hashCode() : 0);
         //result = 31 * result + (maturityDate != null ? maturityDate.hashCode() : 0);
-        result = 31 * result + (num >0 ? Integer.toString(num).hashCode() : 0);
         return result;
     }
 
