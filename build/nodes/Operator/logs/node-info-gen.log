@@ -1,14 +1,14 @@
-2018-07-14 21:54:10,827 main WARN Unable to instantiate org.fusesource.jansi.WindowsAnsiOutputStream
-2018-07-14 21:54:10,834 main WARN Unable to instantiate org.fusesource.jansi.WindowsAnsiOutputStream
+2018-07-16 12:42:36,030 main WARN Unable to instantiate org.fusesource.jansi.WindowsAnsiOutputStream
+2018-07-16 12:42:36,052 main WARN Unable to instantiate org.fusesource.jansi.WindowsAnsiOutputStream
 
    ______               __
   / ____/     _________/ /___ _
- / /     __  / ___/ __  / __ `/         It runs on the JVM because QuickBasic
-/ /___  /_/ / /  / /_/ / /_/ /          is apparently not 'professional' enough.
+ / /     __  / ___/ __  / __ `/         I met my bank manager yesterday and asked
+/ /___  /_/ / /  / /_/ / /_/ /          to check my balance ... he pushed me over!
 \____/     /_/   \__,_/\__,_/
 
 --- Corda Open Source 3.1-corda (d193dd8) -----------------------------------------------
 
 
 Logs can be found in                    : D:\ubuntu\Turnover-Box-Chain\build\nodes\Operator\logs
-Database connection url is              : jdbc:h2:tcp://134.61.83.202:49161/node
+Database connection url is              : jdbc:h2:tcp://134.61.151.133:57860/node

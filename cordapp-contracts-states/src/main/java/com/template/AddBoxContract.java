@@ -53,7 +53,9 @@ public class AddBoxContract implements Contract {
            // should Constrains that the contractor should be the box operators
             final BoxState out = tx.outputsOfType(BoxState.class).get(0);
             final AbstractParty owner = out.getOwner();
-            //check.using("The Owner isn't operator!.",  owner.nameOrNull().gcmd.getSigners().contains(output.getOwner().getOwningKey())
+            String name = owner.nameOrNull().getOrganisation();
+            check.using("The Owner isn't operator!.but "+owner.nameOrNull().getOrganisation(),
+                   name.equals("Operator"));
             pt.setCurrentStep(STEP3);
             check.using("output states are issued by a command signer", cmd.getSigners().contains(out.getOwner().getOwningKey()));
             return null;

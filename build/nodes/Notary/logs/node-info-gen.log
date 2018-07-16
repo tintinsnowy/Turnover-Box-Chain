@@ -1,14 +1,14 @@
-2018-07-14 21:53:58,027 main WARN Unable to instantiate org.fusesource.jansi.WindowsAnsiOutputStream
-2018-07-14 21:53:58,033 main WARN Unable to instantiate org.fusesource.jansi.WindowsAnsiOutputStream
+2018-07-16 12:42:23,903 main WARN Unable to instantiate org.fusesource.jansi.WindowsAnsiOutputStream
+2018-07-16 12:42:23,918 main WARN Unable to instantiate org.fusesource.jansi.WindowsAnsiOutputStream
 
    ______               __
   / ____/     _________/ /___ _
- / /     __  / ___/ __  / __ `/         Whenever I go near my bank I get
-/ /___  /_/ / /  / /_/ / /_/ /          withdrawal symptoms 
+ / /     __  / ___/ __  / __ `/         Top tip: never say "oops", instead
+/ /___  /_/ / /  / /_/ / /_/ /          always say "Ah, Interesting!"
 \____/     /_/   \__,_/\__,_/
 
 --- Corda Open Source 3.1-corda (d193dd8) -----------------------------------------------
 
 
 Logs can be found in                    : D:\ubuntu\Turnover-Box-Chain\build\nodes\Notary\logs
-Database connection url is              : jdbc:h2:tcp://134.61.83.202:49158/node
+Database connection url is              : jdbc:h2:tcp://134.61.151.133:57856/node

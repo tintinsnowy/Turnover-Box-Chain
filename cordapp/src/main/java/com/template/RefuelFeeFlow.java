@@ -54,7 +54,7 @@ public class RefuelFeeFlow extends FlowLogic<Void> {
         txBuilder.setNotary(notary);
 
 // We create the transaction components.
-        RefuelFeeState outputState = new RefuelFeeState(Value, getOurIdentity(), otherParty);
+        RefuelFeeState outputState = new RefuelFeeState(Value, otherParty, getOurIdentity());
         StateAndContract outputContractAndState = new StateAndContract(outputState, RF_CONTRACT_ID);
         List<PublicKey> requiredSigners = ImmutableList.of(getOurIdentity().getOwningKey(), otherParty.getOwningKey());
         Command cmd = new Command<>(new RefuelFeeContract.Create(), requiredSigners);

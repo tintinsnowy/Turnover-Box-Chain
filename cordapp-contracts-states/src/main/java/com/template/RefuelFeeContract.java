@@ -32,16 +32,20 @@ public class RefuelFeeContract implements Contract {
 
             // IOU-specific constraints.
             final RefuelFeeState out = tx.outputsOfType(RefuelFeeState.class).get(0);
-            final Party lender = out.getLender();
-            final Party borrower = out.getBorrower();
+            final Party operator = out.getOperator();
+            final Party supplier = out.getSupplier();
             check.using("The IOU's value must be non-negative.", out.getValue() > 0);
-            check.using("The lender and the borrower cannot be the same entity.", lender != borrower);
+            check.using("The lender and the borrower cannot be the same entity.", operator != supplier);
+            check.using("The Owner isn't Operator!.but "+operator.getName().getOrganisation(),
+                    operator.getName().getOrganisation().equals("Operator"));
+            check.using("The Owner isn't supplier!.but "+supplier.nameOrNull().getOrganisation(),
+                    supplier.getName().getOrganisation().equals("Supplier"));
 
             // Constraints on the signers.
             final List<PublicKey> signers = command.getSigners();
             check.using("There must be two signers.", signers.size() == 2);
             check.using("The borrower and lender must be signers.", signers.containsAll(
-                    ImmutableList.of(borrower.getOwningKey(), lender.getOwningKey())));
+                    ImmutableList.of(supplier.getOwningKey(), operator.getOwningKey())));
 
             return null;
         });

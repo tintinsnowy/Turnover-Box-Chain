@@ -24,11 +24,11 @@ public class RefuelFeeState implements ContractState {
         return value;
     }
 
-    public Party getLender() {
+    public Party getOperator() {
         return boxOperator;
     }
 
-    public Party getBorrower() {
+    public Party getSupplier() {
         return productSupplier;
     }
 
