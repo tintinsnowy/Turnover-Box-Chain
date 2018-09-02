@@ -35,10 +35,10 @@ public class RefuelFeeContract implements Contract {
             final Party operator = out.getOperator();
             final Party supplier = out.getSupplier();
             check.using("The IOU's value must be non-negative.", out.getValue() > 0);
-            check.using("The lender and the borrower cannot be the same entity.", operator != supplier);
+            check.using("The operator shouldn't be the same as supplier", operator != supplier);
             check.using("The Owner isn't Operator!.but "+operator.getName().getOrganisation(),
                     operator.getName().getOrganisation().equals("Operator"));
-            check.using("The Owner isn't supplier!.but "+supplier.nameOrNull().getOrganisation(),
+            check.using("This isn't supplier!.but "+supplier.nameOrNull().getOrganisation(),
                     supplier.getName().getOrganisation().equals("Supplier"));
 
             // Constraints on the signers.

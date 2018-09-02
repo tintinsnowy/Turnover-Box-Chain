@@ -13,44 +13,42 @@ import java.util.List;
 
 public class CashState implements OwnableState {
 
-    private PartyAndReference issuance;
     private AbstractParty owner;
-    private Amount<Issued<Currency>> faceValue;
+    private Amount<Currency> faceValue;
     //private Instant maturityDate;
 
-    public CashState() {
+  /*  public CashState() {
     }  // For serialization
-
-    public CashState(PartyAndReference issuance, AbstractParty owner, Amount<Issued<Currency>> faceValue//, Instant maturityDate) {
+*/
+    public CashState(AbstractParty owner, Amount<Currency> faceValue//, Instant maturityDate) {
     ){
-        this.issuance = issuance;
         this.owner = owner;
         this.faceValue = faceValue;
         //this.maturityDate = maturityDate;
     }
 
     public CashState copy() {
-        return new CashState(this.issuance, this.owner, this.faceValue);
+        return new CashState(this.owner, this.faceValue);
     }
 
     public CashState withoutOwner() {
-        return new CashState(this.issuance, new AnonymousParty(NullKeys.NullPublicKey.INSTANCE), this.faceValue);
+        return new CashState(new AnonymousParty(NullKeys.NullPublicKey.INSTANCE), this.faceValue);
     }
 
     @Override
     public CommandAndState withNewOwner(AbstractParty newOwner) {
-        return new CommandAndState(new CommercialPaper.Commands.Move(), new CashState(this.issuance, newOwner, this.faceValue));
+        return new CommandAndState(new CommercialPaper.Commands.Move(), new CashState(newOwner, this.faceValue));
     }
-
+/*
     public PartyAndReference getIssuance() {
         return issuance;
-    }
+    }*/
 
     public AbstractParty getOwner() {
         return owner;
     }
 
-    public Amount<Issued<Currency>> getFaceValue() {
+    public Amount<Currency> getFaceValue() {
         return faceValue;
     }
 //
@@ -65,7 +63,6 @@ public class CashState implements OwnableState {
 
         CashState state = (CashState) o;
 
-        if (issuance != null ? !issuance.equals(state.issuance) : state.issuance != null) return false;
         if (owner != null ? !owner.equals(state.owner) : state.owner != null) return false;
         return !(faceValue != null ? !faceValue.equals(state.faceValue) : state.faceValue != null);
         //!(maturityDate != null ? !maturityDate.equals(state.maturityDate) : state.maturityDate != null);
@@ -73,9 +70,10 @@ public class CashState implements OwnableState {
 
     @Override
     public int hashCode() {
-        int result = issuance != null ? issuance.hashCode() : 0;
-        result = 31 * result + (owner != null ? owner.hashCode() : 0);
-        result = 31 * result + (faceValue != null ? faceValue.hashCode() : 0);
+        //int result = issuance != null ? issuance.hashCode() : 0;
+        int result =  owner != null ? owner.hashCode() : 0;
+        //result = 31 * result + (owner != null ? owner.hashCode() : 0);
+        //result = 31 * result + (faceValue >0 ? Double.toString(faceValue).hashCode() : 0);
         //result = 31 * result + (maturityDate != null ? maturityDate.hashCode() : 0);
         return result;
     }
