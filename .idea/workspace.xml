@@ -1,129 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="999933bd-e9b0-4a70-8b0c-6dc3c0b084a4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileContent/annotation-processors.bin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileContent/fileContent.lock" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/built.bin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties.lock" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build/libs/Turnover-Box-Chain-0.1.jar" afterPath="$PROJECT_DIR$/build/libs/Turnover-Box-Chain-0.1.jar" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/additional-node-infos/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" afterPath="$PROJECT_DIR$/build/nodes/Distributor/additional-node-infos/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/additional-node-infos/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" afterPath="$PROJECT_DIR$/build/nodes/Distributor/additional-node-infos/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" afterPath="$PROJECT_DIR$/build/nodes/Distributor/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/additional-node-infos/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" afterPath="$PROJECT_DIR$/build/nodes/Distributor/additional-node-infos/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/artemis/bindings/activemq-bindings-1.bindings" afterPath="$PROJECT_DIR$/build/nodes/Distributor/artemis/bindings/activemq-bindings-1.bindings" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/artemis/bindings/activemq-bindings-2.bindings" afterPath="$PROJECT_DIR$/build/nodes/Distributor/artemis/bindings/activemq-bindings-2.bindings" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/artemis/journal/activemq-data-1.amq" afterPath="$PROJECT_DIR$/build/nodes/Distributor/artemis/journal/activemq-data-1.amq" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/artemis/journal/activemq-data-2.amq" afterPath="$PROJECT_DIR$/build/nodes/Distributor/artemis/journal/activemq-data-2.amq" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/artemis/journal/server.lock" afterPath="$PROJECT_DIR$/build/nodes/Distributor/artemis/journal/server.lock" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/bindings/activemq-bindings-1.bindings" afterPath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/bindings/activemq-bindings-1.bindings" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/bindings/activemq-bindings-2.bindings" afterPath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/bindings/activemq-bindings-2.bindings" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/journal/activemq-data-1.amq" afterPath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/journal/activemq-data-1.amq" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/journal/activemq-data-2.amq" afterPath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/journal/activemq-data-2.amq" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/journal/server.lock" afterPath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/journal/server.lock" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/certificates/nodekeystore.jks" afterPath="$PROJECT_DIR$/build/nodes/Distributor/certificates/nodekeystore.jks" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/certificates/sslkeystore.jks" afterPath="$PROJECT_DIR$/build/nodes/Distributor/certificates/sslkeystore.jks" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/cordapps/Turnover-Box-Chain-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Distributor/cordapps/Turnover-Box-Chain-0.1.jar" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/cordapps/cordapp-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Distributor/cordapps/cordapp-0.1.jar" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/cordapps/cordapp-contracts-states-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Distributor/cordapps/cordapp-contracts-states-0.1.jar" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/logs/node-DESKTOP-BKO44JE.log" afterPath="$PROJECT_DIR$/build/nodes/Distributor/logs/node-DESKTOP-BKO44JE.log" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/logs/node-info-gen.log" afterPath="$PROJECT_DIR$/build/nodes/Distributor/logs/node-info-gen.log" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/logs/web/node-DESKTOP-BKO44JE.log" afterPath="$PROJECT_DIR$/build/nodes/Distributor/logs/web/node-DESKTOP-BKO44JE.log" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/network-parameters" afterPath="$PROJECT_DIR$/build/nodes/Distributor/network-parameters" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" afterPath="$PROJECT_DIR$/build/nodes/Distributor/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/persistence.mv.db" afterPath="$PROJECT_DIR$/build/nodes/Distributor/persistence.mv.db" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/process-id" afterPath="$PROJECT_DIR$/build/nodes/Distributor/process-id" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" afterPath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" afterPath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" afterPath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" afterPath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/bindings/activemq-bindings-1.bindings" afterPath="$PROJECT_DIR$/build/nodes/Notary/artemis/bindings/activemq-bindings-1.bindings" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/bindings/activemq-bindings-2.bindings" afterPath="$PROJECT_DIR$/build/nodes/Notary/artemis/bindings/activemq-bindings-2.bindings" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/activemq-data-1.amq" afterPath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/activemq-data-1.amq" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/activemq-data-2.amq" afterPath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/activemq-data-2.amq" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/server.lock" afterPath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/server.lock" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/certificates/nodekeystore.jks" afterPath="$PROJECT_DIR$/build/nodes/Notary/certificates/nodekeystore.jks" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/certificates/sslkeystore.jks" afterPath="$PROJECT_DIR$/build/nodes/Notary/certificates/sslkeystore.jks" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/cordapps/Turnover-Box-Chain-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Notary/cordapps/Turnover-Box-Chain-0.1.jar" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/cordapps/cordapp-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Notary/cordapps/cordapp-0.1.jar" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/cordapps/cordapp-contracts-states-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Notary/cordapps/cordapp-contracts-states-0.1.jar" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/logs/node-DESKTOP-BKO44JE.log" afterPath="$PROJECT_DIR$/build/nodes/Notary/logs/node-DESKTOP-BKO44JE.log" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/logs/node-info-gen.log" afterPath="$PROJECT_DIR$/build/nodes/Notary/logs/node-info-gen.log" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/network-parameters" afterPath="$PROJECT_DIR$/build/nodes/Notary/network-parameters" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" afterPath="$PROJECT_DIR$/build/nodes/Notary/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/persistence.mv.db" afterPath="$PROJECT_DIR$/build/nodes/Notary/persistence.mv.db" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/process-id" afterPath="$PROJECT_DIR$/build/nodes/Notary/process-id" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/additional-node-infos/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" afterPath="$PROJECT_DIR$/build/nodes/Operator/additional-node-infos/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/additional-node-infos/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" afterPath="$PROJECT_DIR$/build/nodes/Operator/additional-node-infos/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" afterPath="$PROJECT_DIR$/build/nodes/Operator/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/additional-node-infos/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" afterPath="$PROJECT_DIR$/build/nodes/Operator/additional-node-infos/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/artemis/bindings/activemq-bindings-1.bindings" afterPath="$PROJECT_DIR$/build/nodes/Operator/artemis/bindings/activemq-bindings-1.bindings" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/artemis/bindings/activemq-bindings-2.bindings" afterPath="$PROJECT_DIR$/build/nodes/Operator/artemis/bindings/activemq-bindings-2.bindings" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/artemis/journal/activemq-data-1.amq" afterPath="$PROJECT_DIR$/build/nodes/Operator/artemis/journal/activemq-data-1.amq" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/artemis/journal/activemq-data-2.amq" afterPath="$PROJECT_DIR$/build/nodes/Operator/artemis/journal/activemq-data-2.amq" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/artemis/journal/server.lock" afterPath="$PROJECT_DIR$/build/nodes/Operator/artemis/journal/server.lock" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/bindings/activemq-bindings-1.bindings" afterPath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/bindings/activemq-bindings-1.bindings" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/bindings/activemq-bindings-2.bindings" afterPath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/bindings/activemq-bindings-2.bindings" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/journal/activemq-data-1.amq" afterPath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/journal/activemq-data-1.amq" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/journal/activemq-data-2.amq" afterPath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/journal/activemq-data-2.amq" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/journal/server.lock" afterPath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/journal/server.lock" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/certificates/nodekeystore.jks" afterPath="$PROJECT_DIR$/build/nodes/Operator/certificates/nodekeystore.jks" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/certificates/sslkeystore.jks" afterPath="$PROJECT_DIR$/build/nodes/Operator/certificates/sslkeystore.jks" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/cordapps/Turnover-Box-Chain-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Operator/cordapps/Turnover-Box-Chain-0.1.jar" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/cordapps/cordapp-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Operator/cordapps/cordapp-0.1.jar" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/cordapps/cordapp-contracts-states-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Operator/cordapps/cordapp-contracts-states-0.1.jar" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/logs/node-DESKTOP-BKO44JE.log" afterPath="$PROJECT_DIR$/build/nodes/Operator/logs/node-DESKTOP-BKO44JE.log" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/logs/node-info-gen.log" afterPath="$PROJECT_DIR$/build/nodes/Operator/logs/node-info-gen.log" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/logs/web/node-DESKTOP-BKO44JE.log" afterPath="$PROJECT_DIR$/build/nodes/Operator/logs/web/node-DESKTOP-BKO44JE.log" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/network-parameters" afterPath="$PROJECT_DIR$/build/nodes/Operator/network-parameters" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" afterPath="$PROJECT_DIR$/build/nodes/Operator/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/persistence.mv.db" afterPath="$PROJECT_DIR$/build/nodes/Operator/persistence.mv.db" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/process-id" afterPath="$PROJECT_DIR$/build/nodes/Operator/process-id" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/additional-node-infos/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" afterPath="$PROJECT_DIR$/build/nodes/Supplier/additional-node-infos/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/additional-node-infos/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" afterPath="$PROJECT_DIR$/build/nodes/Supplier/additional-node-infos/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" afterPath="$PROJECT_DIR$/build/nodes/Supplier/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/additional-node-infos/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" afterPath="$PROJECT_DIR$/build/nodes/Supplier/additional-node-infos/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/artemis/bindings/activemq-bindings-1.bindings" afterPath="$PROJECT_DIR$/build/nodes/Supplier/artemis/bindings/activemq-bindings-1.bindings" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/artemis/bindings/activemq-bindings-2.bindings" afterPath="$PROJECT_DIR$/build/nodes/Supplier/artemis/bindings/activemq-bindings-2.bindings" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/artemis/journal/activemq-data-1.amq" afterPath="$PROJECT_DIR$/build/nodes/Supplier/artemis/journal/activemq-data-1.amq" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/artemis/journal/activemq-data-2.amq" afterPath="$PROJECT_DIR$/build/nodes/Supplier/artemis/journal/activemq-data-2.amq" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/artemis/journal/server.lock" afterPath="$PROJECT_DIR$/build/nodes/Supplier/artemis/journal/server.lock" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/bindings/activemq-bindings-1.bindings" afterPath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/bindings/activemq-bindings-1.bindings" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/bindings/activemq-bindings-2.bindings" afterPath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/bindings/activemq-bindings-2.bindings" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/journal/activemq-data-1.amq" afterPath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/journal/activemq-data-1.amq" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/journal/activemq-data-2.amq" afterPath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/journal/activemq-data-2.amq" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/journal/server.lock" afterPath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/journal/server.lock" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/certificates/nodekeystore.jks" afterPath="$PROJECT_DIR$/build/nodes/Supplier/certificates/nodekeystore.jks" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/certificates/sslkeystore.jks" afterPath="$PROJECT_DIR$/build/nodes/Supplier/certificates/sslkeystore.jks" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/cordapps/Turnover-Box-Chain-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Supplier/cordapps/Turnover-Box-Chain-0.1.jar" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/cordapps/cordapp-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Supplier/cordapps/cordapp-0.1.jar" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/cordapps/cordapp-contracts-states-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Supplier/cordapps/cordapp-contracts-states-0.1.jar" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/logs/node-DESKTOP-BKO44JE.log" afterPath="$PROJECT_DIR$/build/nodes/Supplier/logs/node-DESKTOP-BKO44JE.log" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/logs/node-info-gen.log" afterPath="$PROJECT_DIR$/build/nodes/Supplier/logs/node-info-gen.log" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/logs/web/node-DESKTOP-BKO44JE.log" afterPath="$PROJECT_DIR$/build/nodes/Supplier/logs/web/node-DESKTOP-BKO44JE.log" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/network-parameters" afterPath="$PROJECT_DIR$/build/nodes/Supplier/network-parameters" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" afterPath="$PROJECT_DIR$/build/nodes/Supplier/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/persistence.mv.db" afterPath="$PROJECT_DIR$/build/nodes/Supplier/persistence.mv.db" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/process-id" afterPath="$PROJECT_DIR$/build/nodes/Supplier/process-id" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/whitelist.txt" afterPath="$PROJECT_DIR$/build/nodes/whitelist.txt" />
-      <change beforePath="$PROJECT_DIR$/cordapp-contracts-states/build/classes/java/main/com/template/CashState.class" afterPath="$PROJECT_DIR$/cordapp-contracts-states/build/classes/java/main/com/template/CashState.class" />
-      <change beforePath="$PROJECT_DIR$/cordapp-contracts-states/build/classes/java/main/com/template/RefuelFeeContract.class" afterPath="$PROJECT_DIR$/cordapp-contracts-states/build/classes/java/main/com/template/RefuelFeeContract.class" />
-      <change beforePath="$PROJECT_DIR$/cordapp-contracts-states/build/libs/cordapp-contracts-states-0.1.jar" afterPath="$PROJECT_DIR$/cordapp-contracts-states/build/libs/cordapp-contracts-states-0.1.jar" />
-      <change beforePath="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RechargeContract.java" afterPath="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RechargeContract.java" />
-      <change beforePath="$PROJECT_DIR$/cordapp/build/classes/java/main/com/template/AddBoxFlow.class" afterPath="$PROJECT_DIR$/cordapp/build/classes/java/main/com/template/AddBoxFlow.class" />
-      <change beforePath="$PROJECT_DIR$/cordapp/build/classes/java/main/com/template/RefuelFeeFlowResponder$1SignTxFlow.class" afterPath="$PROJECT_DIR$/cordapp/build/classes/java/main/com/template/RefuelFeeFlowResponder$1SignTxFlow.class" />
-      <change beforePath="$PROJECT_DIR$/cordapp/build/libs/cordapp-0.1.jar" afterPath="$PROJECT_DIR$/cordapp/build/libs/cordapp-0.1.jar" />
-      <change beforePath="$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java" afterPath="$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java" />
-    </list>
+    <list default="true" id="999933bd-e9b0-4a70-8b0c-6dc3c0b084a4" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -214,8 +92,8 @@
       <file leaf-file-name="RefuelFeeFlowResponder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlowResponder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="15" column="75" lean-forward="false" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
+            <state relative-caret-position="61">
+              <caret line="28" column="40" lean-forward="true" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -1805,8 +1683,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlowResponder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="15" column="75" lean-forward="false" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
+        <state relative-caret-position="61">
+          <caret line="28" column="40" lean-forward="true" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
           <folding />
         </state>
       </provider>
