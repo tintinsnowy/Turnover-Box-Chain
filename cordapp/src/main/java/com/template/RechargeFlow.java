@@ -2,10 +2,7 @@ package com.template;
 
 import co.paralleluniverse.fibers.Suspendable;
 import com.google.common.collect.ImmutableList;
-import net.corda.core.contracts.Amount;
-import net.corda.core.contracts.Command;
-import net.corda.core.contracts.Issued;
-import net.corda.core.contracts.StateAndContract;
+import net.corda.core.contracts.*;
 import net.corda.core.flows.*;
 import net.corda.core.identity.*;
 import net.corda.core.messaging.CordaRPCOps;
@@ -19,7 +16,9 @@ import javax.annotation.Nullable;
 import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
+import static net.corda.core.contracts.ContractsDSL.requireThat;
 import static net.corda.finance.Currencies.EUR;
 
 public class RechargeFlow {
@@ -88,8 +87,10 @@ public class RechargeFlow {
             StateAndContract outputContractAndState = new StateAndContract(outputState, RechargeContract.Recharge_Contract_ID);
 
             CordaX500Name x500Name = CordaX500Name.parse("O=Operator,L=Cologne,C=DE");
-            CordaRPCOps rpcOps = null;
-            Party receiver = rpcOps.wellKnownPartyFromX500Name(x500Name);
+            // or using getPeerByLegalName
+            //CordaRPCOps rpcOps = null;
+            //Party receiver = rpcOps.wellKnownPartyFromX500Name(x500Name);
+            Party receiver = getServiceHub().getIdentityService().wellKnownPartyFromX500Name(x500Name);
             List<PublicKey> requiredSigners = ImmutableList.of(getOurIdentity().getOwningKey(), receiver.getOwningKey());
 
             //Step 2 Building: we add the items to the builder.
@@ -106,8 +107,16 @@ public class RechargeFlow {
             progressTracker.setCurrentStep(SIGNING);
             final SignedTransaction signedTx = getServiceHub().signInitialTransaction(txBuilder);
 
+            // Step 5 creating a session with the counterparty
+            FlowSession otherpartySession = initiateFlow(receiver);;
+            otherpartySession.send("hello the transaction num is:xxx");
+
+            // Step 6: Obtaining the counterparty's signature.
+            SignedTransaction fullySignedTx = subFlow(new CollectSignaturesFlow(
+                    signedTx, ImmutableList.of(otherpartySession), CollectSignaturesFlow.tracker()));
+
             // Finalising the transaction.
-            subFlow(new FinalityFlow(signedTx));
+            subFlow(new FinalityFlow(fullySignedTx));
 
 
             return null;
@@ -122,13 +131,37 @@ public class RechargeFlow {
         public Responder(FlowSession counterpartySession) {
             this.counterpartySession = counterpartySession;
         }
-
         /**
          * Define the acceptor's flow logic here.
          */
         @Suspendable
         @Override
-        public Void call() { return null; }
+        public Void call() throws FlowException {
+            class SignTxFlow extends SignTransactionFlow {
+                private SignTxFlow(FlowSession otherPartySession, ProgressTracker progressTracker) {
+                    super(otherPartySession, progressTracker);
+                }
+
+                @Override
+                protected void checkTransaction(SignedTransaction stx) {
+                    requireThat(require -> {
+                        ContractState output = stx.getTx().getOutputs().get(0).getData();
+                        require.using("This must be an Recharge transaction.", output instanceof CashState);
+                        CashState iou = (CashState) output;
+                        require.using("The Recharge value can't be under 0.", iou.getValue() > 0);
+                        Scanner scanner = new Scanner( System.in );
+                        System.out.print( "If you have received the transfer, pls enter: yes; otherwise no" );
+                        String input = scanner.nextLine();
+                        require.using("The Transaction is denied by the Operator",  input.equals("yes"));
+                        return null;
+                    });
+                }
+            }
+
+            subFlow(new SignTxFlow(counterpartySession, SignTransactionFlow.Companion.tracker()));
+
+            return null;
+        }//end of the void call()
     }
 
 }

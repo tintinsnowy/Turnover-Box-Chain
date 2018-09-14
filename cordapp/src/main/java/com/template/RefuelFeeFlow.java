@@ -69,7 +69,7 @@ public class RefuelFeeFlow extends FlowLogic<Void> {
         final SignedTransaction signedTx = getServiceHub().signInitialTransaction(txBuilder);
 
 // Creating a session with the other party.
-        FlowSession otherpartySession = initiateFlow(otherParty);
+        FlowSession otherpartySession = initiateFlow(otherParty);;
 
 // Obtaining the counterparty's signature.
         SignedTransaction fullySignedTx = subFlow(new CollectSignaturesFlow(

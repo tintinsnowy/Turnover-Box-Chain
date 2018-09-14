@@ -34,7 +34,7 @@ public class RefuelFeeFlowResponder extends FlowLogic<Void> {
             protected void checkTransaction(SignedTransaction stx) {
                 requireThat(require -> {
                     ContractState output = stx.getTx().getOutputs().get(0).getData();
-                    require.using("This must be an IOU transaction.", output instanceof RefuelFeeState);
+                    require.using("This must be an Refuelfee transaction.", output instanceof RefuelFeeState);
                     RefuelFeeState iou = (RefuelFeeState) output;
                     require.using("The IOU's value can't be too high.", iou.getValue() < 100);
                     return null;

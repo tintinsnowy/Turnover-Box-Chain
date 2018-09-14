@@ -83,4 +83,8 @@ public class CashState implements OwnableState {
         // an ImmutableList is a List whose contents are immutable so can’t be modified.
         return ImmutableList.of(this.owner);
     }
+
+    public Long getValue() {
+        return faceValue.getQuantity();
+    }
 }
