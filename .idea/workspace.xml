@@ -2,11 +2,127 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="999933bd-e9b0-4a70-8b0c-6dc3c0b084a4" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileContent/annotation-processors.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileContent/fileContent.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/built.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties.lock" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/CashState.java" afterPath="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/CashState.java" />
+      <change beforePath="$PROJECT_DIR$/build/libs/Turnover-Box-Chain-0.1.jar" afterPath="$PROJECT_DIR$/build/libs/Turnover-Box-Chain-0.1.jar" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/additional-node-infos/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" afterPath="$PROJECT_DIR$/build/nodes/Distributor/additional-node-infos/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/additional-node-infos/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" afterPath="$PROJECT_DIR$/build/nodes/Distributor/additional-node-infos/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" afterPath="$PROJECT_DIR$/build/nodes/Distributor/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/additional-node-infos/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" afterPath="$PROJECT_DIR$/build/nodes/Distributor/additional-node-infos/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/artemis/bindings/activemq-bindings-1.bindings" afterPath="$PROJECT_DIR$/build/nodes/Distributor/artemis/bindings/activemq-bindings-1.bindings" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/artemis/bindings/activemq-bindings-2.bindings" afterPath="$PROJECT_DIR$/build/nodes/Distributor/artemis/bindings/activemq-bindings-2.bindings" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/artemis/journal/activemq-data-1.amq" afterPath="$PROJECT_DIR$/build/nodes/Distributor/artemis/journal/activemq-data-1.amq" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/artemis/journal/activemq-data-2.amq" afterPath="$PROJECT_DIR$/build/nodes/Distributor/artemis/journal/activemq-data-2.amq" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/artemis/journal/server.lock" afterPath="$PROJECT_DIR$/build/nodes/Distributor/artemis/journal/server.lock" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/bindings/activemq-bindings-1.bindings" afterPath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/bindings/activemq-bindings-1.bindings" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/bindings/activemq-bindings-2.bindings" afterPath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/bindings/activemq-bindings-2.bindings" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/journal/activemq-data-1.amq" afterPath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/journal/activemq-data-1.amq" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/journal/activemq-data-2.amq" afterPath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/journal/activemq-data-2.amq" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/journal/server.lock" afterPath="$PROJECT_DIR$/build/nodes/Distributor/brokers/rpc/journal/server.lock" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/certificates/nodekeystore.jks" afterPath="$PROJECT_DIR$/build/nodes/Distributor/certificates/nodekeystore.jks" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/certificates/sslkeystore.jks" afterPath="$PROJECT_DIR$/build/nodes/Distributor/certificates/sslkeystore.jks" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/cordapps/Turnover-Box-Chain-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Distributor/cordapps/Turnover-Box-Chain-0.1.jar" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/cordapps/cordapp-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Distributor/cordapps/cordapp-0.1.jar" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/cordapps/cordapp-contracts-states-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Distributor/cordapps/cordapp-contracts-states-0.1.jar" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/logs/node-DESKTOP-BKO44JE.log" afterPath="$PROJECT_DIR$/build/nodes/Distributor/logs/node-DESKTOP-BKO44JE.log" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/logs/node-info-gen.log" afterPath="$PROJECT_DIR$/build/nodes/Distributor/logs/node-info-gen.log" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/logs/web/node-DESKTOP-BKO44JE.log" afterPath="$PROJECT_DIR$/build/nodes/Distributor/logs/web/node-DESKTOP-BKO44JE.log" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/network-parameters" afterPath="$PROJECT_DIR$/build/nodes/Distributor/network-parameters" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" afterPath="$PROJECT_DIR$/build/nodes/Distributor/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/persistence.mv.db" afterPath="$PROJECT_DIR$/build/nodes/Distributor/persistence.mv.db" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Distributor/process-id" afterPath="$PROJECT_DIR$/build/nodes/Distributor/process-id" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" afterPath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" afterPath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" afterPath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" afterPath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/bindings/activemq-bindings-1.bindings" afterPath="$PROJECT_DIR$/build/nodes/Notary/artemis/bindings/activemq-bindings-1.bindings" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/bindings/activemq-bindings-2.bindings" afterPath="$PROJECT_DIR$/build/nodes/Notary/artemis/bindings/activemq-bindings-2.bindings" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/activemq-data-1.amq" afterPath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/activemq-data-1.amq" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/activemq-data-2.amq" afterPath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/activemq-data-2.amq" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/server.lock" afterPath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/server.lock" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/certificates/nodekeystore.jks" afterPath="$PROJECT_DIR$/build/nodes/Notary/certificates/nodekeystore.jks" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/certificates/sslkeystore.jks" afterPath="$PROJECT_DIR$/build/nodes/Notary/certificates/sslkeystore.jks" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/cordapps/Turnover-Box-Chain-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Notary/cordapps/Turnover-Box-Chain-0.1.jar" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/cordapps/cordapp-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Notary/cordapps/cordapp-0.1.jar" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/cordapps/cordapp-contracts-states-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Notary/cordapps/cordapp-contracts-states-0.1.jar" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/logs/node-DESKTOP-BKO44JE.log" afterPath="$PROJECT_DIR$/build/nodes/Notary/logs/node-DESKTOP-BKO44JE.log" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/logs/node-info-gen.log" afterPath="$PROJECT_DIR$/build/nodes/Notary/logs/node-info-gen.log" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/network-parameters" afterPath="$PROJECT_DIR$/build/nodes/Notary/network-parameters" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" afterPath="$PROJECT_DIR$/build/nodes/Notary/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/persistence.mv.db" afterPath="$PROJECT_DIR$/build/nodes/Notary/persistence.mv.db" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/process-id" afterPath="$PROJECT_DIR$/build/nodes/Notary/process-id" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/additional-node-infos/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" afterPath="$PROJECT_DIR$/build/nodes/Operator/additional-node-infos/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/additional-node-infos/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" afterPath="$PROJECT_DIR$/build/nodes/Operator/additional-node-infos/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" afterPath="$PROJECT_DIR$/build/nodes/Operator/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/additional-node-infos/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" afterPath="$PROJECT_DIR$/build/nodes/Operator/additional-node-infos/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/artemis/bindings/activemq-bindings-1.bindings" afterPath="$PROJECT_DIR$/build/nodes/Operator/artemis/bindings/activemq-bindings-1.bindings" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/artemis/bindings/activemq-bindings-2.bindings" afterPath="$PROJECT_DIR$/build/nodes/Operator/artemis/bindings/activemq-bindings-2.bindings" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/artemis/journal/activemq-data-1.amq" afterPath="$PROJECT_DIR$/build/nodes/Operator/artemis/journal/activemq-data-1.amq" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/artemis/journal/activemq-data-2.amq" afterPath="$PROJECT_DIR$/build/nodes/Operator/artemis/journal/activemq-data-2.amq" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/artemis/journal/server.lock" afterPath="$PROJECT_DIR$/build/nodes/Operator/artemis/journal/server.lock" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/bindings/activemq-bindings-1.bindings" afterPath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/bindings/activemq-bindings-1.bindings" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/bindings/activemq-bindings-2.bindings" afterPath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/bindings/activemq-bindings-2.bindings" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/journal/activemq-data-1.amq" afterPath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/journal/activemq-data-1.amq" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/journal/activemq-data-2.amq" afterPath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/journal/activemq-data-2.amq" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/journal/server.lock" afterPath="$PROJECT_DIR$/build/nodes/Operator/brokers/rpc/journal/server.lock" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/certificates/nodekeystore.jks" afterPath="$PROJECT_DIR$/build/nodes/Operator/certificates/nodekeystore.jks" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/certificates/sslkeystore.jks" afterPath="$PROJECT_DIR$/build/nodes/Operator/certificates/sslkeystore.jks" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/cordapps/Turnover-Box-Chain-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Operator/cordapps/Turnover-Box-Chain-0.1.jar" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/cordapps/cordapp-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Operator/cordapps/cordapp-0.1.jar" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/cordapps/cordapp-contracts-states-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Operator/cordapps/cordapp-contracts-states-0.1.jar" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/logs/node-DESKTOP-BKO44JE.log" afterPath="$PROJECT_DIR$/build/nodes/Operator/logs/node-DESKTOP-BKO44JE.log" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/logs/node-info-gen.log" afterPath="$PROJECT_DIR$/build/nodes/Operator/logs/node-info-gen.log" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/logs/web/node-DESKTOP-BKO44JE.log" afterPath="$PROJECT_DIR$/build/nodes/Operator/logs/web/node-DESKTOP-BKO44JE.log" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/network-parameters" afterPath="$PROJECT_DIR$/build/nodes/Operator/network-parameters" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" afterPath="$PROJECT_DIR$/build/nodes/Operator/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/persistence.mv.db" afterPath="$PROJECT_DIR$/build/nodes/Operator/persistence.mv.db" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Operator/process-id" afterPath="$PROJECT_DIR$/build/nodes/Operator/process-id" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/additional-node-infos/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" afterPath="$PROJECT_DIR$/build/nodes/Supplier/additional-node-infos/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/additional-node-infos/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" afterPath="$PROJECT_DIR$/build/nodes/Supplier/additional-node-infos/nodeInfo-3FEB215F3E2CF5A0192852D44E48E2C288984140E342F418C3BCCF963727D9A0" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" afterPath="$PROJECT_DIR$/build/nodes/Supplier/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/additional-node-infos/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" afterPath="$PROJECT_DIR$/build/nodes/Supplier/additional-node-infos/nodeInfo-834A352F595B5136EAB95615199E96370BAA6AE986A63EFC967AE857DE238319" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/artemis/bindings/activemq-bindings-1.bindings" afterPath="$PROJECT_DIR$/build/nodes/Supplier/artemis/bindings/activemq-bindings-1.bindings" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/artemis/bindings/activemq-bindings-2.bindings" afterPath="$PROJECT_DIR$/build/nodes/Supplier/artemis/bindings/activemq-bindings-2.bindings" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/artemis/journal/activemq-data-1.amq" afterPath="$PROJECT_DIR$/build/nodes/Supplier/artemis/journal/activemq-data-1.amq" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/artemis/journal/activemq-data-2.amq" afterPath="$PROJECT_DIR$/build/nodes/Supplier/artemis/journal/activemq-data-2.amq" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/artemis/journal/server.lock" afterPath="$PROJECT_DIR$/build/nodes/Supplier/artemis/journal/server.lock" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/bindings/activemq-bindings-1.bindings" afterPath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/bindings/activemq-bindings-1.bindings" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/bindings/activemq-bindings-2.bindings" afterPath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/bindings/activemq-bindings-2.bindings" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/journal/activemq-data-1.amq" afterPath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/journal/activemq-data-1.amq" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/journal/activemq-data-2.amq" afterPath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/journal/activemq-data-2.amq" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/journal/server.lock" afterPath="$PROJECT_DIR$/build/nodes/Supplier/brokers/rpc/journal/server.lock" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/certificates/nodekeystore.jks" afterPath="$PROJECT_DIR$/build/nodes/Supplier/certificates/nodekeystore.jks" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/certificates/sslkeystore.jks" afterPath="$PROJECT_DIR$/build/nodes/Supplier/certificates/sslkeystore.jks" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/cordapps/Turnover-Box-Chain-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Supplier/cordapps/Turnover-Box-Chain-0.1.jar" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/cordapps/cordapp-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Supplier/cordapps/cordapp-0.1.jar" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/cordapps/cordapp-contracts-states-0.1.jar" afterPath="$PROJECT_DIR$/build/nodes/Supplier/cordapps/cordapp-contracts-states-0.1.jar" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/logs/node-DESKTOP-BKO44JE.log" afterPath="$PROJECT_DIR$/build/nodes/Supplier/logs/node-DESKTOP-BKO44JE.log" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/logs/node-info-gen.log" afterPath="$PROJECT_DIR$/build/nodes/Supplier/logs/node-info-gen.log" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/logs/web/node-DESKTOP-BKO44JE.log" afterPath="$PROJECT_DIR$/build/nodes/Supplier/logs/web/node-DESKTOP-BKO44JE.log" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/network-parameters" afterPath="$PROJECT_DIR$/build/nodes/Supplier/network-parameters" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" afterPath="$PROJECT_DIR$/build/nodes/Supplier/nodeInfo-2B31C52FBFA1C66AB9A4E2AB93BAFF43A70CE74C24480F6BDCB356067C4D3658" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/persistence.mv.db" afterPath="$PROJECT_DIR$/build/nodes/Supplier/persistence.mv.db" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Supplier/process-id" afterPath="$PROJECT_DIR$/build/nodes/Supplier/process-id" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/whitelist.txt" afterPath="$PROJECT_DIR$/build/nodes/whitelist.txt" />
+      <change beforePath="$PROJECT_DIR$/cordapp-contracts-states/build/classes/java/main/com/template/CashState.class" afterPath="$PROJECT_DIR$/cordapp-contracts-states/build/classes/java/main/com/template/CashState.class" />
+      <change beforePath="$PROJECT_DIR$/cordapp-contracts-states/build/classes/java/main/com/template/RefuelFeeContract.class" afterPath="$PROJECT_DIR$/cordapp-contracts-states/build/classes/java/main/com/template/RefuelFeeContract.class" />
+      <change beforePath="$PROJECT_DIR$/cordapp-contracts-states/build/libs/cordapp-contracts-states-0.1.jar" afterPath="$PROJECT_DIR$/cordapp-contracts-states/build/libs/cordapp-contracts-states-0.1.jar" />
+      <change beforePath="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RechargeContract.java" afterPath="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RechargeContract.java" />
+      <change beforePath="$PROJECT_DIR$/cordapp/build/classes/java/main/com/template/AddBoxFlow.class" afterPath="$PROJECT_DIR$/cordapp/build/classes/java/main/com/template/AddBoxFlow.class" />
+      <change beforePath="$PROJECT_DIR$/cordapp/build/classes/java/main/com/template/RefuelFeeFlowResponder$1SignTxFlow.class" afterPath="$PROJECT_DIR$/cordapp/build/classes/java/main/com/template/RefuelFeeFlowResponder$1SignTxFlow.class" />
+      <change beforePath="$PROJECT_DIR$/cordapp/build/libs/cordapp-0.1.jar" afterPath="$PROJECT_DIR$/cordapp/build/libs/cordapp-0.1.jar" />
       <change beforePath="$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java" afterPath="$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java" />
-      <change beforePath="$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlow.java" afterPath="$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlow.java" />
-      <change beforePath="$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlowResponder.java" afterPath="$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlowResponder.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -40,22 +156,43 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file leaf-file-name="AddBoxContract.class" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/build/classes/java/main/com/template/AddBoxContract.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            <state relative-caret-position="864">
+              <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+              <folding>
+                <marker date="1536947763212" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1536947763212" expanded="false" signature="136:677" ph="..." />
+                <marker date="1536947763212" expanded="false" signature="1028:1039" ph=" { " />
+                <marker date="1536947763212" expanded="false" signature="1117:1123" ph=" }" />
+                <marker date="1536947763212" expanded="true" signature="1170:2180" ph="{...}" />
+                <marker date="1536947763212" expanded="true" signature="1360:2172" ph="{...}" />
+                <marker date="1536947763212" expanded="true" signature="2233:2411" ph="{...}" />
+                <marker date="1536947763212" expanded="true" signature="2256:2267" ph="{}" />
+                <marker date="1536947763212" expanded="true" signature="2351:2405" ph="{...}" />
+                <marker date="1536947763212" expanded="true" signature="2380:2395" ph="{}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RechargeFlow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="140" column="17" lean-forward="true" selection-start-line="140" selection-start-column="17" selection-end-line="140" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RechargeFlow.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java">
+      <file leaf-file-name="RechargeContract.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RechargeContract.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="153" column="55" lean-forward="true" selection-start-line="153" selection-start-column="55" selection-end-line="153" selection-end-column="55" />
+            <state relative-caret-position="-74">
+              <caret line="39" column="6" lean-forward="false" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -64,7 +201,7 @@
       <file leaf-file-name="CashState.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/CashState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
+            <state relative-caret-position="1944">
               <caret line="86" column="15" lean-forward="false" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
               <folding>
                 <element signature="e#2717#2718#0" expanded="true" />
@@ -74,11 +211,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RefuelFeeFlowResponder.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RefuelFeeFlowResponder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlowResponder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="33" column="68" lean-forward="true" selection-start-line="33" selection-start-column="68" selection-end-line="33" selection-end-column="68" />
+            <state relative-caret-position="65">
+              <caret line="15" column="75" lean-forward="false" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -96,8 +233,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>equal</find>
-      <find>getParticipants</find>
       <find>int</find>
       <find>fullySignedTx</find>
       <find>tx</find>
@@ -126,6 +261,8 @@
       <find>progressTracker</find>
       <find>super</find>
       <find>get</find>
+      <find>@Suspendable.</find>
+      <find>@Suspendable</find>
     </findStrings>
     <dirStrings>
       <dir>D:\ubuntu\Turnover-Box-Chain\</dir>
@@ -928,10 +1065,10 @@
         <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxFlow.java" />
         <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/PledgeFlow.java" />
         <option value="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RefuelFeeContract.java" />
-        <option value="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RechargeContract.java" />
         <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlowResponder.java" />
         <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlow.java" />
         <option value="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/CashState.java" />
+        <option value="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RechargeContract.java" />
         <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java" />
       </list>
     </option>
@@ -958,6 +1095,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1044,10 +1182,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1189,6 +1326,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1242,13 +1380,8 @@
         <state relative-caret-position="432">
           <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#807#808#0" expanded="false" />
-            <element signature="e#871#872#0" expanded="false" />
-            <element signature="e#1336#1337#0" expanded="false" />
-            <element signature="e#1364#1365#0" expanded="false" />
-            <element signature="e#1410#1411#0" expanded="false" />
-            <element signature="e#1442#1443#0" expanded="false" />
+            <element signature="e#2717#2718#0" expanded="true" />
+            <element signature="e#2763#2764#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1294,13 +1427,8 @@
         <state relative-caret-position="135">
           <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#807#808#0" expanded="false" />
-            <element signature="e#871#872#0" expanded="false" />
-            <element signature="e#1336#1337#0" expanded="false" />
-            <element signature="e#1364#1365#0" expanded="false" />
-            <element signature="e#1410#1411#0" expanded="false" />
-            <element signature="e#1442#1443#0" expanded="false" />
+            <element signature="e#2717#2718#0" expanded="true" />
+            <element signature="e#2763#2764#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1390,9 +1518,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1755">
           <caret line="65" column="1" lean-forward="false" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1417,9 +1543,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1431">
           <caret line="65" column="1" lean-forward="false" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1444,9 +1568,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1755">
           <caret line="65" column="1" lean-forward="false" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1478,9 +1600,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1431">
           <caret line="65" column="1" lean-forward="false" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1578,7 +1698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2781">
           <caret line="103" column="34" lean-forward="false" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1622,14 +1741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RechargeContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
-          <caret line="24" column="32" lean-forward="false" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RefuelFeeContract.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-81">
@@ -1648,23 +1759,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/build/classes/java/main/com/template/AddBoxContract.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlowResponder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="33" column="68" lean-forward="true" selection-start-line="33" selection-start-column="68" selection-end-line="33" selection-end-column="68" />
-          <folding />
+        <state relative-caret-position="864">
+          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+          <folding>
+            <marker date="1536947763212" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1536947763212" expanded="false" signature="136:677" ph="..." />
+            <marker date="1536947763212" expanded="false" signature="1028:1039" ph=" { " />
+            <marker date="1536947763212" expanded="false" signature="1117:1123" ph=" }" />
+            <marker date="1536947763212" expanded="true" signature="1170:2180" ph="{...}" />
+            <marker date="1536947763212" expanded="true" signature="1360:2172" ph="{...}" />
+            <marker date="1536947763212" expanded="true" signature="2233:2411" ph="{...}" />
+            <marker date="1536947763212" expanded="true" signature="2256:2267" ph="{}" />
+            <marker date="1536947763212" expanded="true" signature="2351:2405" ph="{...}" />
+            <marker date="1536947763212" expanded="true" signature="2380:2395" ph="{}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/CashState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
+        <state relative-caret-position="1944">
           <caret line="86" column="15" lean-forward="false" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
           <folding>
             <element signature="e#2717#2718#0" expanded="true" />
@@ -1673,10 +1787,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RechargeContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-74">
+          <caret line="39" column="6" lean-forward="false" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="153" column="55" lean-forward="true" selection-start-line="153" selection-start-column="55" selection-end-line="153" selection-end-column="55" />
+        <state relative-caret-position="308">
+          <caret line="140" column="17" lean-forward="true" selection-start-line="140" selection-start-column="17" selection-end-line="140" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlowResponder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="15" column="75" lean-forward="false" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
           <folding />
         </state>
       </provider>

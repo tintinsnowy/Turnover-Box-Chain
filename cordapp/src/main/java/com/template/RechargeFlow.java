@@ -25,6 +25,8 @@ public class RechargeFlow {
 
 
 // the partners submit the RechargeFlow
+    @InitiatingFlow
+    @StartableByRPC
     public static class Initiator extends FlowLogic<Void> {
         private long amount;
         private AbstractParty theParty;// the Party which deposits.
@@ -73,6 +75,7 @@ public class RechargeFlow {
         }
 
         @Override
+        @Suspendable
         public Void call() throws FlowException {
             // We create a transaction builder.
             final Party notary = getServiceHub().getNetworkMapCache().getNotaryIdentities().get(0);
