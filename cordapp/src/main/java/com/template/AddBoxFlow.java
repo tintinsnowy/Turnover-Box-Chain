@@ -90,7 +90,7 @@ public class AddBoxFlow extends FlowLogic<Void> {
 
             // Step 1 Initialisation：We create the transaction components.
             progressTracker.setCurrentStep(INITIALISING);
-            BoxState outputState = new BoxState(getOurIdentity(), productType, price);
+            Box outputState = new Box(getOurIdentity(), productType, price);
             StateAndContract outputContractAndState = new StateAndContract(outputState, AddBoxContract.AddBox_Contract_ID);
             List<PublicKey> requiredSigners =  new ArrayList<>();
             requiredSigners.add(getOurIdentity().getOwningKey());

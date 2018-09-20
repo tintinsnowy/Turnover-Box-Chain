@@ -14,11 +14,11 @@ import java.util.Currency;
 import java.util.List;
 import java.lang.*;
 
+// https://github.com/soumilvavikar/exchange-traded-funds/blob/f1a34335a3b7cf135f35ca350d44118cd5fd8c37/java-source/src/main/java/com/poc/State.java
 
+public class Box implements OwnableState {
 
-public class BoxState implements OwnableState {
-
-    //private PartyAndReference issuance;
+    private PartyAndReference issuance;
     private AbstractParty owner;
     //private Amount<Issued<Currency>> faceValue;
     //private Instant maturityDate;
@@ -30,7 +30,7 @@ public class BoxState implements OwnableState {
 //    }  // For serialization
 
     @ConstructorForDeserialization
-    public BoxState( AbstractParty owner, //Amount<Issued<Currency>> faceValue , Instant maturityDate) {
+    public Box( AbstractParty owner, //Amount<Issued<Currency>> faceValue , Instant maturityDate) {
                     String productType, double price){
 
         //this.issuance = issuance;
@@ -38,42 +38,44 @@ public class BoxState implements OwnableState {
         //this.maturityDate = maturityDate;
         this.productType = productType;
         this.price = price;
-        //this.num = num;
     }
 
-    public BoxState copy() {
-        return new BoxState(this.owner, this.productType,this.price);
+    public Box copy() {
+        return new Box(this.owner, this.productType,this.price);
     }
 
-    public BoxState withoutOwner() {
-        return new BoxState(new AnonymousParty(NullKeys.NullPublicKey.INSTANCE),
+    public Box withoutOwner() {
+        return new Box(new AnonymousParty(NullKeys.NullPublicKey.INSTANCE),
                 this.productType, this.price);
     }
 
     @Override
     public CommandAndState withNewOwner(AbstractParty newOwner) {
         return new CommandAndState(new CommercialPaper.Commands.Move(),
-                new BoxState(newOwner, this.productType, this.price));
+                new Box(newOwner, this.productType, this.price));
     }
 
+    public String getProductType() {
+        return productType;
+    }
 
     public AbstractParty getOwner() {
         return owner;
     }
 
- /*
+
+
     @Override
    public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        BoxState state = (BoxState) o;
+        Box state = (Box) o;
 
-        if (issuance != null ? !issuance.equals(state.issuance) : state.issuance != null) return false;
         if (owner != null ? !owner.equals(state.owner) : state.owner != null) return false;
-        return !(faceValue != null ? !faceValue.equals(state.faceValue) : state.faceValue != null);
-        //!(maturityDate != null ? !maturityDate.equals(state.maturityDate) : state.maturityDate != null);
-    }*/
+        if (productType != null ? !productType.equals(state.productType) : state.productType != null) return false;
+        return !(price <0 ? !(price==(state.price)) : state.price < 0 ); //-----to be checked
+    }
 
     @Override
     public int hashCode() {

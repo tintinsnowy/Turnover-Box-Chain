@@ -52,10 +52,10 @@ public class RechargeContract implements Contract {
             pt.setCurrentStep(STEP2);
             check.using("There should be one output state of type RechargeContract.", tx.getOutputs().size() == 1);
             // should Constrains that the contractor should be the box operators
-            final CashState out = tx.outputsOfType(CashState.class).get(0);
+            final Cash.State out = tx.outputsOfType(Cash.State.class).get(0);
             final AbstractParty owner = out.getOwner();
             String name = owner.nameOrNull().getOrganisation();
-            check.using("The Owner is operator!  ", !name.equals("Operator"));
+            check.using("The Owner shouldn't be operator!  ", !name.equals("Operator"));
             pt.setCurrentStep(STEP3);
             check.using("output states are issued by a command signer", cmd.getSigners().contains(out.getOwner().getOwningKey()));
             return null;

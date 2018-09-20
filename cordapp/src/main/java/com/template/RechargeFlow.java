@@ -9,12 +9,15 @@ import net.corda.core.messaging.CordaRPCOps;
 import net.corda.core.messaging.RPCOps;
 import net.corda.core.transactions.SignedTransaction;
 import net.corda.core.transactions.TransactionBuilder;
+import net.corda.core.utilities.OpaqueBytes;
 import net.corda.core.utilities.ProgressTracker;
+import net.corda.finance.contracts.asset.Cash;
 
 
 import javax.annotation.Nullable;
 import java.security.PublicKey;
 import java.util.ArrayList;
+import java.util.Currency;
 import java.util.List;
 import java.util.Scanner;
 
@@ -23,12 +26,11 @@ import static net.corda.finance.Currencies.EUR;
 
 public class RechargeFlow {
 
-
 // the partners submit the RechargeFlow
     @InitiatingFlow
     @StartableByRPC
     public static class Initiator extends FlowLogic<Void> {
-        private long amount;
+        private Amount<Currency> amount;
         private AbstractParty theParty;// the Party which deposits.
         //private Party otherParty;
         /**
@@ -68,7 +70,7 @@ public class RechargeFlow {
             return progressTracker;
         }
 
-        public Initiator(long amount, AbstractParty theParty) {
+        public Initiator(Amount<Currency>amount, AbstractParty theParty) {
             this.amount = amount;
             this.theParty = theParty;
             //this.otherParty = otherParty;
@@ -79,14 +81,14 @@ public class RechargeFlow {
         public Void call() throws FlowException {
             // We create a transaction builder.
             final Party notary = getServiceHub().getNetworkMapCache().getNotaryIdentities().get(0);
-
             final TransactionBuilder txBuilder = new TransactionBuilder();
             txBuilder.setNotary(notary);
 
             // Step 1 Initialisation：We create the transaction components.
             progressTracker.setCurrentStep(INITIALISING);
-
-            CashState outputState = new CashState(getOurIdentity(), new Amount<>(amount, EUR));
+            // I guess the PartyAndReference used forencryto
+            PartyAndReference issuer = getOurIdentity().ref(OpaqueBytes.of((theParty.getOwningKey() + amount.toString()).getBytes()));
+            Cash.State outputState = new Cash.State(issuer, amount, theParty);
             StateAndContract outputContractAndState = new StateAndContract(outputState, RechargeContract.Recharge_Contract_ID);
 
             CordaX500Name x500Name = CordaX500Name.parse("O=Operator,L=Cologne,C=DE");
@@ -96,7 +98,7 @@ public class RechargeFlow {
             Party receiver = getServiceHub().getIdentityService().wellKnownPartyFromX500Name(x500Name);
             List<PublicKey> requiredSigners = ImmutableList.of(getOurIdentity().getOwningKey(), receiver.getOwningKey());
 
-            //Step 2 Building: we add the items to the builder.
+            //Step 2 Building: we add the items to the builder.´´´´´´´´´´´´´´´´´´´´´´´here to chage 
             progressTracker.setCurrentStep(BUILDING);
             Command cmd = new Command<>(new RechargeContract.Add.Issue(), requiredSigners);
             txBuilder.withItems(outputContractAndState, cmd);
@@ -112,7 +114,7 @@ public class RechargeFlow {
 
             // Step 5 creating a session with the counterparty
             FlowSession otherpartySession = initiateFlow(receiver);;
-            otherpartySession.send("hello the transaction num is:xxx");
+           // otherpartySession.send("hello the transaction num is:xxx");
 
             // Step 6: Obtaining the counterparty's signature.
             SignedTransaction fullySignedTx = subFlow(new CollectSignaturesFlow(
@@ -147,15 +149,16 @@ public class RechargeFlow {
 
                 @Override
                 protected void checkTransaction(SignedTransaction stx) {
+                    Scanner scanner = new Scanner( System.in );
                     requireThat(require -> {
                         ContractState output = stx.getTx().getOutputs().get(0).getData();
                         require.using("This must be an Recharge transaction.", output instanceof CashState);
                         CashState iou = (CashState) output;
                         require.using("The Recharge value can't be under 0.", iou.getValue() > 0);
-                        Scanner scanner = new Scanner( System.in );
-                        System.out.print( "If you have received the transfer, pls enter: yes; otherwise no" );
-                        String input = scanner.nextLine();
-                        require.using("The Transaction is denied by the Operator",  input.equals("yes"));
+                        System.out.println( "If you have received the transfer, pls enter: yes; otherwise no:\n" );
+
+                        String input =  scanner.nextLine();
+                        require.using("The Transaction is denied by the Operator: "+input,  input.equals("yes"));
                         return null;
                     });
                 }

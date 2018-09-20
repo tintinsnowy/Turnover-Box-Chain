@@ -20,14 +20,8 @@ public class AddBoxContract implements Contract {
 
     // Our Create command.
     public static class Add implements CommandData {
-
-//        public static class Issue implements CommodityContract.Commands {
-//            @Override
-//            public boolean equals(Object obj) {
-//                return obj instanceof Issue;
-//            }
-//        }
     public static class Issue extends TypeOnlyCommandData implements CommodityContract.Commands {}
+
     }
 
     // set up some tracker
