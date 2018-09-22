@@ -93,8 +93,6 @@ public class RechargeFlow {
 
             CordaX500Name x500Name = CordaX500Name.parse("O=Operator,L=Cologne,C=DE");
             // or using getPeerByLegalName
-            //CordaRPCOps rpcOps = null;
-            //Party receiver = rpcOps.wellKnownPartyFromX500Name(x500Name);
             Party receiver = getServiceHub().getIdentityService().wellKnownPartyFromX500Name(x500Name);
             List<PublicKey> requiredSigners = ImmutableList.of(getOurIdentity().getOwningKey(), receiver.getOwningKey());
 

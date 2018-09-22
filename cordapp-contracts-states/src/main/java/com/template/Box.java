@@ -25,7 +25,8 @@ public class Box implements OwnableState {
     private String productType;
     private double price;
 
-   //What is series
+
+    //What is series
 //    public BoxState( AnonymousParty owner, String productType, double price) {
 //    }  // For serialization
 
@@ -92,4 +93,6 @@ public class Box implements OwnableState {
         // an ImmutableList is a List whose contents are immutable so can’t be modified.
         return ImmutableList.of(this.owner);
     }
+
+
 }

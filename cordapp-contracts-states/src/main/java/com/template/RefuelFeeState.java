@@ -11,17 +11,20 @@ import java.util.List;
  * Define your state object here.
  */
 public class RefuelFeeState implements ContractState {
-    private final Integer value;
     private final Party productSupplier;
     private final Party boxOperator;
+    private final String productType;
+    private final Integer num;
 
-    public RefuelFeeState(int value, Party productSupplier, Party boxOperator) {
-        this.value = value;
+
+    public RefuelFeeState( Party productSupplier, Party boxOperator,String productType, Integer num) {
         this.productSupplier = productSupplier;
         this.boxOperator = boxOperator;
+        this.productType = productType;
+        this.num = num;
     }
-    public int getValue() {
-        return value;
+    public int getnNum() {
+        return num;
     }
 
     public Party getOperator() {
@@ -31,6 +34,8 @@ public class RefuelFeeState implements ContractState {
     public Party getSupplier() {
         return productSupplier;
     }
+
+    public String getProductType() {return  productType; }
 
     /** The public keys of the involved parties. */
     @Override

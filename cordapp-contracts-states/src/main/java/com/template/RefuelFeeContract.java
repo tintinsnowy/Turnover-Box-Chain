@@ -1,5 +1,5 @@
 package com.template;// Add these imports:
-import com.google.common.collect.ImmutableList;
+
 import com.template.RefuelFeeState;
 import net.corda.core.contracts.CommandData;
 import net.corda.core.contracts.CommandWithParties;
@@ -22,11 +22,6 @@ public class RefuelFeeContract implements Contract {
 
     // Our Create command.
     public interface Commands extends CommandData {
-        class Issue extends TypeOnlyCommandData implements Commands {
-        }
-
-        class Transfer extends TypeOnlyCommandData implements Commands {
-        }
 
         class Settle extends TypeOnlyCommandData implements Commands {
         }
@@ -34,29 +29,22 @@ public class RefuelFeeContract implements Contract {
 
     @Override
     public void verify(LedgerTransaction tx) {
-        final CommandWithParties<RefuelFeeContract.Commands> command = requireSingleCommand(tx.getCommands(), RefuelFeeContract.Commands.class);
+        final CommandWithParties<RefuelFeeContract.Commands> cmd = requireSingleCommand(tx.getCommands(), RefuelFeeContract.Commands.class);
 
         requireThat(check -> {
             // Constraints on the shape of the transaction.
-            check.using("No inputs should be consumed when issuing an IOU.", tx.getInputs().isEmpty());
-            check.using("There should be one output state of type IOUState.", tx.getOutputs().size() == 1);
+            check.using("No Inputs is not allowed", !tx.getInputs().isEmpty());
+            final RefuelFeeState InfoHub = tx.outputsOfType(RefuelFeeState.class).get(0);
+            final List<Box> input = tx.inputsOfType(Box.class);
+            final List<Box> output = tx.outputsOfType(Box.class);
 
-            // IOU-specific constraints.
-            final CashState out = tx.outputsOfType(CashState.class).get(0);
-            final AbstractParty payer = out.getOwner();
-            check.using("The Refuel value must be non-negative.", out.getValue() > 0);
-
-            //check.using("The operator shouldn't be the same as supplier", operator != supplier);
-            //check.using("The Owner isn't Operator!.but "+operator.getName().getOrganisation(),
-             //       operator.getName().getOrganisation().equals("Operator"));
-            check.using("This isn't supplier!.but "+payer.nameOrNull().getOrganisation(),
-                    payer.nameOrNull() .getOrganisation().equals("Supplier"));
-
-            // Constraints on the signers.
-//            final List<PublicKey> signers = command.getSigners();
-//            check.using("There must be two signers.", signers.size() == 2);
-//            check.using("The borrower and lender must be signers.", signers.containsAll(
-//                    ImmutableList.of(supplier.getOwningKey(), operator.getOwningKey())));
+            check.using("the transaction is signed by the Owner of Box", cmd.getSigners().
+                    contains(input.get(0).getOwner().getOwningKey()));
+            check.using("the input and output state should be the same", input.size()== output.size());
+            for (int i=0;i<input.size();i++){
+                check.using("The Owner of Boxes used to be Operator", input.get(i).getOwner().nameOrNull().equals("Operator") );
+                check.using("Now Boxes belongs to Supplier", output.get(i).getOwner().nameOrNull().equals("Supplier") );
+            }
 
             return null;
         });
