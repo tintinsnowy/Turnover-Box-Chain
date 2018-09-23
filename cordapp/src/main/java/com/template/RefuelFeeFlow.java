@@ -13,9 +13,6 @@ import net.corda.core.transactions.TransactionBuilder;
 import net.corda.core.utilities.ProgressTracker;
 import net.corda.core.utilities.ProgressTracker.Step;
 import net.corda.finance.contracts.asset.Cash;
-
-
-import java.awt.*;
 import java.security.PublicKey;
 import java.util.Currency;
 import java.util.Iterator;
@@ -24,7 +21,6 @@ import java.util.Scanner;
 
 import static com.template.RefuelFeeContract.RF_CONTRACT_ID;
 import static net.corda.core.contracts.ContractsDSL.requireThat;
-import static net.corda.finance.Currencies.EUR;
 import static net.corda.finance.contracts.GetBalances.getCashBalance;
 
 public class RefuelFeeFlow {
@@ -80,6 +76,10 @@ public class RefuelFeeFlow {
         @Override
         public Void call() throws FlowException {
 
+            // step 2: we get the counterparty identity
+            CordaX500Name x500Name = CordaX500Name.parse("O=Operator,L=Cologne,C=DE");
+            Party receiver = getServiceHub().getIdentityService().wellKnownPartyFromX500Name(x500Name);
+
             // Step1: We retrieve the Boxes(obligation) / Cash from vault and check
             progressTracker.setCurrentStep(PREPARATION);
             final int boxNum  = BoxManager.getBoxBalance(productType, getServiceHub());
@@ -95,9 +95,6 @@ public class RefuelFeeFlow {
                 throw new FlowException(String.format(
                         "Proposer has only %s but needs %s to settle.", cashBalance, amount));
             }
-            // step 2: we get the counterparty identity
-            CordaX500Name x500Name = CordaX500Name.parse("O=Operator,L=Cologne,C=DE");
-            Party receiver = getServiceHub().getIdentityService().wellKnownPartyFromX500Name(x500Name);
 
             /// step 3:  Create a settle command.
             //StateAndContract outputContractAndState = new StateAndContract(outputState, RF_CONTRACT_ID);

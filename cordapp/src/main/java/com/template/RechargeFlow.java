@@ -150,9 +150,9 @@ public class RechargeFlow {
                     Scanner scanner = new Scanner( System.in );
                     requireThat(require -> {
                         ContractState output = stx.getTx().getOutputs().get(0).getData();
-                        require.using("This must be an Recharge transaction.", output instanceof CashState);
-                        CashState iou = (CashState) output;
-                        require.using("The Recharge value can't be under 0.", iou.getValue() > 0);
+                        require.using("This must be an Recharge transaction.", output instanceof Cash.State);
+                        Cash.State iou = (Cash.State) output;
+                        require.using("The Recharge value can't be under 0.", iou.getAmount().getQuantity()> 0);
                         System.out.println( "If you have received the transfer, pls enter: yes; otherwise no:\n" );
 
                         String input =  scanner.nextLine();

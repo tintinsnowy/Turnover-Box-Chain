@@ -1,7 +1,6 @@
 package com.template;
 
 import co.paralleluniverse.fibers.Suspendable;
-import com.google.common.collect.ImmutableList;
 import net.corda.core.contracts.Command;
 import net.corda.core.contracts.StateAndContract;
 import net.corda.core.flows.*;
@@ -109,6 +108,9 @@ public class AddBoxFlow extends FlowLogic<Void> {
             progressTracker.setCurrentStep(SIGNING);
             final SignedTransaction signedTx = getServiceHub().signInitialTransaction(txBuilder);
 
+            //test
+            final int boxNum  = BoxManager.getBoxBalance(productType, getServiceHub());
+            System.out.printf("The new added Boxes: %d", boxNum); // it can should on the screan!
             // Finalising the transaction.
             subFlow(new FinalityFlow(signedTx));
         }

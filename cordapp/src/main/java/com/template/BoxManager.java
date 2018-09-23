@@ -1,10 +1,8 @@
 package com.template;
 
 import net.corda.core.contracts.StateAndRef;
-import net.corda.core.flows.FlowException;
 import net.corda.core.node.ServiceHub;
 import net.corda.core.node.services.Vault;
-import net.corda.core.node.services.VaultService;
 import net.corda.core.node.services.vault.QueryCriteria;
 
 import java.util.*;
@@ -20,10 +18,9 @@ public class BoxManager {
                 orElseThrow(() -> new NotFoundException("No Box found with productType: " + productType));
     }
 
-
     public static int getBoxBalance(String productType, ServiceHub serviceHub) {
         List<StateAndRef<Box>> Boxes = getBoxesByType(productType, serviceHub);
-        System.out.print("balance for " + productType + " is " + Boxes.size());
+        System.out.println("balance for " + productType + " is " + Boxes.size());
         return Boxes.size();
     }
 
@@ -40,5 +37,4 @@ public class BoxManager {
         }
         return Boxes;
     }
-
 }

@@ -45,7 +45,7 @@ public class AddBoxContract implements Contract {
             pt.setCurrentStep(STEP2);
             check.using("There should be one output state of type AddBoxContract.", tx.getOutputs().size() == 1);
            // should Constrains that the contractor should be the box operators
-            final BoxState out = tx.outputsOfType(BoxState.class).get(0);
+            final Box out = tx.outputsOfType(Box.class).get(0);
             final AbstractParty owner = out.getOwner();
             String name = owner.nameOrNull().getOrganisation();
             check.using("The Owner isn't operator!.but "+owner.nameOrNull().getOrganisation(),
