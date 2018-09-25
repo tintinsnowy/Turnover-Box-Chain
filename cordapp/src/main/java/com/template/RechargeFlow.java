@@ -23,6 +23,7 @@ import java.util.Scanner;
 
 import static net.corda.core.contracts.ContractsDSL.requireThat;
 import static net.corda.finance.Currencies.EUR;
+import static net.corda.finance.contracts.GetBalances.getCashBalance;
 
 public class RechargeFlow {
 
@@ -121,7 +122,8 @@ public class RechargeFlow {
             // Finalising the transaction.
             subFlow(new FinalityFlow(fullySignedTx));
 
-
+            String  balance = getCashBalance(getServiceHub(), EUR).toString();
+            System.out.println("newly added cash is: "+ balance);
             return null;
         }
     }
