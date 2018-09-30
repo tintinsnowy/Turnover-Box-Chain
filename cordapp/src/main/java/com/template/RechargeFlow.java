@@ -21,6 +21,7 @@ import java.util.Currency;
 import java.util.List;
 import java.util.Scanner;
 
+import static com.template.RechargeContract.Recharge_Contract_ID;
 import static net.corda.core.contracts.ContractsDSL.requireThat;
 import static net.corda.finance.Currencies.EUR;
 import static net.corda.finance.contracts.GetBalances.getCashBalance;
@@ -90,7 +91,7 @@ public class RechargeFlow {
             // I guess the PartyAndReference used forencryto
             PartyAndReference issuer = getOurIdentity().ref(OpaqueBytes.of((theParty.getOwningKey() + amount.toString()).getBytes()));
             Cash.State outputState = new Cash.State(issuer, amount, theParty);
-            StateAndContract outputContractAndState = new StateAndContract(outputState, RechargeContract.Recharge_Contract_ID);
+            //StateAndContract outputContractAndState = new StateAndContract(outputState, RechargeContract.Recharge_Contract_ID);
 
             CordaX500Name x500Name = CordaX500Name.parse("O=Operator,L=Cologne,C=DE");
             // or using getPeerByLegalName
@@ -99,8 +100,8 @@ public class RechargeFlow {
 
             //Step 2 Building: we add the items to the builder.´´´´´´´´´´´´´´´´´´´´´´´here to chage 
             progressTracker.setCurrentStep(BUILDING);
-            Command cmd = new Command<>(new RechargeContract.Add.Issue(), requiredSigners);
-            txBuilder.withItems(outputContractAndState, cmd);
+            txBuilder.addOutputState(outputState, Recharge_Contract_ID)
+                     .addCommand(new RechargeContract.Commands.Issue(), requiredSigners);
 
             //Step3 Verifying the transaction.
             txBuilder.verify(getServiceHub());
@@ -155,10 +156,10 @@ public class RechargeFlow {
                         require.using("This must be an Recharge transaction.", output instanceof Cash.State);
                         Cash.State iou = (Cash.State) output;
                         require.using("The Recharge value can't be under 0.", iou.getAmount().getQuantity()> 0);
-                        System.out.println( "If you have received the transfer, pls enter: yes; otherwise no:\n" );
+                        System.out.println( "If you have received the transfer, pls enter: Y; otherwise N:\n" );
 
                         String input =  scanner.nextLine();
-                        require.using("The Transaction is denied by the Operator: "+input,  input.equals("yes"));
+                        require.using("The Transaction is denied by the Operator: "+input,  input.equals("Y"));
                         return null;
                     });
                 }

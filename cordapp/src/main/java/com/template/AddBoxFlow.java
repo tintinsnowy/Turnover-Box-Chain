@@ -16,6 +16,8 @@ import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.template.AddBoxContract.AddBox_Contract_ID;
+
 //import com.template.AddBoxContract.*;
 //import static net.corda.core.messaging.CordaRPCOps.*;
 
@@ -57,7 +59,6 @@ public class AddBoxFlow extends FlowLogic<Void> {
             return FinalityFlow.Companion.tracker();
         }
     };
-
     private final ProgressTracker progressTracker = new ProgressTracker(
             INITIALISING, BUILDING, SIGNING, VERIFY, FINALISING
     );
@@ -90,15 +91,16 @@ public class AddBoxFlow extends FlowLogic<Void> {
             // Step 1 Initialisation：We create the transaction components.
             progressTracker.setCurrentStep(INITIALISING);
             Box outputState = new Box(getOurIdentity(), productType, price);
-            StateAndContract outputContractAndState = new StateAndContract(outputState, AddBoxContract.AddBox_Contract_ID);
+            //StateAndContract outputContractAndState = new StateAndContract(outputState, AddBox_Contract_ID);
             List<PublicKey> requiredSigners =  new ArrayList<>();
             requiredSigners.add(getOurIdentity().getOwningKey());
 
             //Step 2 Building: we add the items to the builder.
             progressTracker.setCurrentStep(BUILDING);
-            Command cmd = new Command<>(new AddBoxContract.Add.Issue(),requiredSigners);
-            txBuilder.withItems(outputContractAndState,cmd);
-
+            //Command<AddBoxContract.cmdData.Issue> cmd = new Command<>(new AddBoxContract.cmdData.Issue(),requiredSigners);
+            //txBuilder.withItems(outputContractAndState,cmd);
+           txBuilder.addOutputState(outputState, AddBox_Contract_ID)
+                   .addCommand(new AddBoxContract.Commands.Issue(),requiredSigners);
             //Step3 Verifying the transaction.
             txBuilder.verify(getServiceHub());
             //txBuilder.toWireTransaction().toLedgerTransaction(getServiceHub()).verify();

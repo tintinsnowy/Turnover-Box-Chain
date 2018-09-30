@@ -9,7 +9,10 @@ import net.corda.core.identity.Party;
 import net.corda.core.transactions.LedgerTransaction;
 import net.corda.core.utilities.ProgressTracker;
 import net.corda.finance.contracts.asset.Cash;
-import net.corda.finance.contracts.asset.CommodityContract;
+
+import java.security.PublicKey;
+import java.util.HashSet;
+import java.util.Set;
 
 import static net.corda.core.contracts.ContractsDSL.requireSingleCommand;
 import static net.corda.core.contracts.ContractsDSL.requireThat;
@@ -20,15 +23,10 @@ public class RechargeContract implements Contract {
     public static final String Recharge_Contract_ID = "com.template.RechargeContract";
 
     // Our Create command.
-    public static class Add implements CommandData {
-
-        //        public static class Issue implements CommodityContract.Commands {
-//            @Override
-//            public boolean equals(Object obj) {
-//                return obj instanceof Issue;
-//            }
-//        }
-        public static class Issue extends TypeOnlyCommandData implements CommodityContract.Commands {}
+    public interface Commands extends CommandData {
+        class Issue extends TypeOnlyCommandData implements Commands { }
+        class Transfer extends TypeOnlyCommandData implements Commands {}
+        class Settle extends  TypeOnlyCommandData implements Commands {}
     }
 
     // set up some tracker
@@ -42,10 +40,34 @@ public class RechargeContract implements Contract {
     @Override
     public void verify(LedgerTransaction tx) {
         //throw new UnsupportedOperationException();
-        final CommandWithParties<Add.Issue> cmd = requireSingleCommand(tx.getCommands(), Add.Issue.class);
-        //start AddBoxFlow productType: normaltyple, price: 10, num: 2
-        requireThat(check -> {
+        final CommandWithParties<Commands> command = requireSingleCommand(tx.getCommands(), Commands.class);
+        final RechargeContract.Commands commandData  = command.getValue();
+        final Set<PublicKey> setOfSigners = new HashSet<>(command.getSigners());
 
+        if (commandData instanceof RechargeContract.Commands.Issue) {
+            verifyIssue(tx, setOfSigners);
+        } else if (commandData instanceof RechargeContract.Commands.Transfer) {
+            verifyTransfer(tx, setOfSigners);
+        } else if (commandData instanceof RechargeContract.Commands.Settle) {
+            verifySettle(tx, setOfSigners);
+        } else {
+            throw new IllegalArgumentException("Unrecognised command.");
+        }
+    }
+
+    private void verifyTransfer(LedgerTransaction tx, Set<PublicKey> signers) {
+        System.out.println("\n we are confirming Cash");
+
+    }
+
+    private void verifySettle(LedgerTransaction tx, Set<PublicKey> signers) {
+
+
+    }
+
+    private void verifyIssue(LedgerTransaction tx, Set<PublicKey> signers) {
+
+        requireThat(check -> {
             // Constraints on the shape of the transaction.
             pt.setCurrentStep(STEP1);
             check.using("Cannot reissue a.transcation", tx.getInputs().isEmpty());
@@ -57,9 +79,12 @@ public class RechargeContract implements Contract {
             String name = owner.nameOrNull().getOrganisation();
             check.using("The Owner shouldn't be operator!  ", !name.equals("Operator"));
             pt.setCurrentStep(STEP3);
-            check.using("output states are issued by a command signer", cmd.getSigners().contains(out.getOwner().getOwningKey()));
+            check.using("output states are issued by a command signer", signers.contains(out.getOwner().getOwningKey()));
             return null;
         });
+
+
     }
+
 
 }

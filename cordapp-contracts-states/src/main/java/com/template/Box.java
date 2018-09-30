@@ -52,7 +52,7 @@ public class Box implements OwnableState {
 
     @Override
     public CommandAndState withNewOwner(AbstractParty newOwner) {
-        return new CommandAndState(new CommercialPaper.Commands.Move(),
+        return new CommandAndState(new AddBoxContract.Commands.Transfer(),
                 new Box(newOwner, this.productType, this.price));
     }
 
