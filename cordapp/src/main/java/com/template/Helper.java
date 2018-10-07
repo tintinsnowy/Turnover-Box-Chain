@@ -4,9 +4,7 @@ import net.corda.core.contracts.*;
 import net.corda.core.identity.Party;
 import net.corda.core.serialization.CordaSerializable;
 
-import java.security.PublicKey;
 import java.util.Currency;
-import java.util.List;
 
 //Contract classes must provide a verify function, but they may optionally also provide helper functions to simplify their usage.
 @CordaSerializable
@@ -20,10 +18,14 @@ public class Helper
     public static class LenderInfo {
         public final Amount<Currency> amount;
         public final Party payToIdentity;
+        public final long numDemand;
+        public final long numInStock;
 
-        public LenderInfo(Amount<Currency> amount, Party payToIdentity) {
+        public LenderInfo(Amount<Currency> amount, Party payToIdentity, long numDemand, long numInStock) {
             this.amount = amount;
             this.payToIdentity = payToIdentity;
+            this.numDemand = numDemand;
+            this.numInStock = numInStock;
         }
     }
 

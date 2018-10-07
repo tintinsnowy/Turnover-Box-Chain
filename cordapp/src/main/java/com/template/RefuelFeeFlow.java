@@ -2,8 +2,6 @@ package com.template;
 
 import co.paralleluniverse.fibers.Suspendable;
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
-import kotlin.Pair;
 import net.corda.confidential.IdentitySyncFlow;
 import net.corda.core.contracts.*;
 import net.corda.core.flows.*;
@@ -21,7 +19,6 @@ import net.corda.finance.contracts.asset.Cash;
 import java.security.PublicKey;
 import java.util.*;
 
-import static com.template.RefuelFeeContract.RF_CONTRACT_ID;
 import static com.template.AddBoxContract.AddBox_Contract_ID;
 import static net.corda.core.contracts.ContractsDSL.requireThat;
 import static net.corda.finance.contracts.GetBalances.getCashBalance;
@@ -36,14 +33,14 @@ public class RefuelFeeFlow {
     public static class Initiator extends FlowLogic<Void> {
 
         private final Amount<Currency> amount;
-        private final Integer num;  // the number of ProductType x should be traded
+        private final long numDemand;  // the number of ProductType x should be traded
         private final String productType;
         /**
          * The progress tracker provides checkpoints indicating the progress of the flow to observers.
          */
-        public Initiator(Amount<Currency> amount,Integer num, String productType) {
+        public Initiator(Amount<Currency> amount,  long numDemand, String productType) {
             this.amount = amount;
-            this.num = num;
+            this.numDemand = numDemand;
             this.productType = productType;
         }
 
@@ -85,18 +82,18 @@ public class RefuelFeeFlow {
 
             // Step2: We retrieve the Boxes from vault and check whether they are enough
             progressTracker.setCurrentStep(AWAITING_PROPOSAL);
-            final int boxNum  = BoxManager.getBoxBalance(productType, getServiceHub());
-            if(boxNum< num){
+            final long numInStock  = BoxManager.getBoxBalance(productType, getServiceHub());
+            if(numInStock< numDemand){
                 throw new FlowException(String.format(
                         "The boxes of type %s are not enough," +
-                                "only %d left", productType,boxNum
+                                "only %d left", productType,numInStock
                 ));
             }
             // Step 3: send the MSG and Boxes to Supplier to settle the Transaction
             List<StateAndRef<Box>> boxesToSettle = BoxManager.getBoxesByType(productType, getServiceHub());
             FlowSession otherPartySession = initiateFlow(receiver);
             subFlow(new SendStateAndRefFlow(otherPartySession, boxesToSettle));
-            Helper.LenderInfo hello = new Helper.LenderInfo(amount, getOurIdentity());
+            Helper.LenderInfo hello = new Helper.LenderInfo(amount, getOurIdentity(), numDemand, numInStock);
             otherPartySession.send(hello);
 
             /// step 4:  Verify the signing
@@ -117,6 +114,7 @@ public class RefuelFeeFlow {
                 protected void checkTransaction(SignedTransaction stx) {
                     requireThat(require -> {
                         ContractState output = stx.getTx().getOutputs().get(0).getData();
+                        System.out.println(output);
                         //require.using("This must be an Recharge transaction.", output instanceof Cash.State);
                         return null;
                     });
@@ -128,7 +126,6 @@ public class RefuelFeeFlow {
 //                    signedTx, ImmutableList.of(otherpartySession), CollectSignaturesFlow.tracker()));
 
             // Finalising the transaction.
-            //subFlow(new FinalityFlow(fullySignedTx));
           subFlow(new SignTxFlow(otherPartySession, SignTransactionFlow.Companion.tracker()));
             return null;
         }
@@ -168,15 +165,15 @@ public class RefuelFeeFlow {
 
             // STEP2> CONFIRMING
             System.out.println(" the size of Boxes: "+ boxesToSettle.get(0).getState().getData().getProductType()+
-            " is " + boxesToSettle.size());
+                    " is " + boxesToSettle.size());
             //Scanner scanner = new Scanner( System.in );
-           // System.out.println("\n If it is what you want or not, pls Enter(Y/N) \n");
+            // System.out.println("\n If it is what you want or not, pls Enter(Y/N) \n");
             //String input =  scanner.nextLine();
             //if(!input.equalsIgnoreCase("Y"))
-                //throw new NotFoundException("Supplier denies the proposal "+ input);
+            //throw new NotFoundException("Supplier denies the proposal "+ input);
 
-             //STEP 3> to check whether the hassupplier has enough money
-           // final Amount<Currency> cashBalance = getCashBalance(getServiceHub(), OperatorInfo.amount.getToken());
+            //STEP 3> to check whether the hassupplier has enough money
+            // final Amount<Currency> cashBalance = getCashBalance(getServiceHub(), OperatorInfo.amount.getToken());
             final Amount<Currency> cashBalance = getCashBalance(getServiceHub(), OperatorInfo.amount.getToken());
             System.out.println("\n " + cashBalance.toString());
             if (cashBalance.getQuantity() < OperatorInfo.amount.getQuantity()) {
@@ -194,16 +191,16 @@ public class RefuelFeeFlow {
             Iterator<StateAndRef<Box>> it;
             it = boxesToSettle.iterator();
             final Command cmdSettle = new Command<>(new AddBoxContract.Commands.Transfer(), requiredSigners);
-            int count = 1;
-            while(it.hasNext() && count <= boxesToSettle.size()) {
+            while(it.hasNext() ) {
                 StateAndRef<Box> boxToSettle = it.next();
-                CommandAndState boxTransfered = boxToSettle.getState().getData().withNewOwner(getOurIdentity());
-                txBuilder.addInputState(boxToSettle)
-                         .addOutputState(boxTransfered.getOwnableState(), AddBox_Contract_ID);
-
-                count ++;
+                txBuilder.addInputState(boxToSettle);
             }
-            txBuilder.addCommand(cmdSettle).addCommand(new Command<>(new RechargeContract.Commands.Transfer(),requiredSigners));
+            String productType = boxesToSettle.get(0).getState().getData().getProductType();
+            Box supplierState = new Box(getOurIdentity(),productType ,OperatorInfo.numDemand);
+            Box opState = new Box(otherPartySession.getCounterparty(),productType ,OperatorInfo.numInStock-OperatorInfo.numDemand);
+            txBuilder.addOutputState(supplierState, AddBox_Contract_ID)
+                    .addOutputState(opState,AddBox_Contract_ID)
+                    .addCommand(cmdSettle).addCommand(new Command<>(new RechargeContract.Commands.Transfer(),requiredSigners));
 //            RefuelFeeState outputState = new RefuelFeeState(getOurIdentity(),getOurIdentity(),
 //                    boxesToSettle.get(0).getState().getData().getProductType(), boxesToSettle.size());
 //            txBuilder.withItems(new StateAndContract(outputState, RF_CONTRACT_ID), cmdSettle);
@@ -212,7 +209,7 @@ public class RefuelFeeFlow {
             //kotlin.Pair<txBuilder,cashSigningPubKeys>
 
             //
-            PublicKey okey=  otherPartySession.getCounterparty().getOwningKey();
+            PublicKey okey =  otherPartySession.getCounterparty().getOwningKey();
             AbstractParty to = getServiceHub().getIdentityService().partyFromKey(okey);
             final  List<PublicKey> cashSigningPubKeys =Cash.generateSpend(
                     getServiceHub(),
@@ -246,5 +243,3 @@ public class RefuelFeeFlow {
         }
     }
 }
-
-

@@ -1,63 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlow.java" line="208" mnemonic="7" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="999933bd-e9b0-4a70-8b0c-6dc3c0b084a4" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_3_2_corda.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_confidential_identities_3_2_corda.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_core_3_2_corda.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_finance_3_2_corda.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_jackson_3_2_corda.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_mock_3_2_corda.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_node_3_2_corda.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_node_api_3_2_corda.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_node_driver_3_2_corda.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_rpc_3_2_corda.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_test_common_3_2_corda.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_test_utils_3_2_corda.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_webserver_3_2_corda.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_webserver_impl_3_2_corda.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jolokia_jolokia_core_1_6_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jolokia_jolokia_jsr160_1_6_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jolokia_jolokia_jvm_agent_1_6_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jolokia_jolokia_war_war_1_6_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_3_1_corda.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_confidential_identities_3_1_corda.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_core_3_1_corda.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_finance_3_1_corda.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_jackson_3_1_corda.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_mock_3_1_corda.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_node_3_1_corda.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_node_api_3_1_corda.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_node_driver_3_1_corda.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_rpc_3_1_corda.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_test_common_3_1_corda.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_test_utils_3_1_corda.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_webserver_3_1_corda.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_corda_corda_webserver_impl_3_1_corda.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jolokia_jolokia_core_1_3_7.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jolokia_jolokia_jsr160_1_3_7.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jolokia_jolokia_war_war_1_3_7.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_json_json_20180130.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Turnover-Box-Chain_integrationTest.iml" afterPath="$PROJECT_DIR$/.idea/modules/Turnover-Box-Chain_integrationTest.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Turnover-Box-Chain_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/Turnover-Box-Chain_main.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Turnover-Box-Chain_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/Turnover-Box-Chain_test.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/cordapp-contracts-states/cordapp-contracts-states_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/cordapp-contracts-states/cordapp-contracts-states_main.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/cordapp-contracts-states/cordapp-contracts-states_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/cordapp-contracts-states/cordapp-contracts-states_test.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/cordapp/cordapp_integrationTest.iml" afterPath="$PROJECT_DIR$/.idea/modules/cordapp/cordapp_integrationTest.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/cordapp/cordapp_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/cordapp/cordapp_main.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/cordapp/cordapp_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/cordapp/cordapp_test.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change beforePath="$PROJECT_DIR$/cordapp-contracts-states/build/libs/cordapp-contracts-states-0.1.jar" afterPath="$PROJECT_DIR$/cordapp-contracts-states/build/libs/cordapp-contracts-states-0.1.jar" />
       <change beforePath="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/AddBoxContract.java" afterPath="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/AddBoxContract.java" />
       <change beforePath="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/Box.java" afterPath="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/Box.java" />
-      <change beforePath="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RechargeContract.java" afterPath="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RechargeContract.java" />
       <change beforePath="$PROJECT_DIR$/cordapp/build/libs/cordapp-0.1.jar" afterPath="$PROJECT_DIR$/cordapp/build/libs/cordapp-0.1.jar" />
       <change beforePath="$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxFlow.java" afterPath="$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxFlow.java" />
+      <change beforePath="$PROJECT_DIR$/cordapp/src/main/java/com/template/BoxManager.java" afterPath="$PROJECT_DIR$/cordapp/src/main/java/com/template/BoxManager.java" />
       <change beforePath="$PROJECT_DIR$/cordapp/src/main/java/com/template/Helper.java" afterPath="$PROJECT_DIR$/cordapp/src/main/java/com/template/Helper.java" />
+      <change beforePath="$PROJECT_DIR$/cordapp/src/main/java/com/template/PledgeFlow.java" afterPath="$PROJECT_DIR$/cordapp/src/main/java/com/template/PledgeFlow.java" />
       <change beforePath="$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java" afterPath="$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java" />
       <change beforePath="$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlow.java" afterPath="$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlow.java" />
     </list>
@@ -94,24 +47,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="RechargeContract.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RechargeContract.java">
+      <file leaf-file-name="RefuelFeeFlow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="57" column="79" lean-forward="false" selection-start-line="57" selection-start-column="79" selection-end-line="57" selection-end-column="79" />
+            <state relative-caret-position="627">
+              <caret line="212" column="62" lean-forward="false" selection-start-line="212" selection-start-column="62" selection-end-line="212" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="class#2065:2283" expanded="false" />
+                <element signature="e#2192#2193#0" expanded="true" />
+                <element signature="e#2272#2273#0" expanded="true" />
+                <element signature="class#2329:2527" expanded="false" />
+                <element signature="e#2445#2446#0" expanded="true" />
+                <element signature="e#2516#2517#0" expanded="true" />
+                <element signature="e#6458#6459#0" expanded="true" />
+                <element signature="e#6524#6525#0" expanded="true" />
+                <element signature="e#7238#7239#0" expanded="true" />
+                <element signature="e#7284#7285#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddBoxFlow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxFlow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -119,40 +72,28 @@
       <file leaf-file-name="Box.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/Box.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-540">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="1193">
+              <caret line="68" column="36" lean-forward="false" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RefuelFeeFlow.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlow.java">
+      <file leaf-file-name="AddBoxFlow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxFlow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="101" column="43" lean-forward="true" selection-start-line="101" selection-start-column="43" selection-end-line="101" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="class#2173:2391" expanded="false" />
-                <element signature="e#2300#2301#0" expanded="true" />
-                <element signature="e#2380#2381#0" expanded="true" />
-                <element signature="class#2437:2635" expanded="false" />
-                <element signature="e#2553#2554#0" expanded="true" />
-                <element signature="e#2624#2625#0" expanded="true" />
-                <element signature="e#6528#6529#0" expanded="true" />
-                <element signature="e#6594#6595#0" expanded="true" />
-                <element signature="e#7308#7309#0" expanded="true" />
-                <element signature="e#7354#7355#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-162">
+              <caret line="89" column="20" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Helper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/Helper.java">
+      <file leaf-file-name="AddBoxContract.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/AddBoxContract.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="162">
+              <caret line="74" column="35" lean-forward="false" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -161,11 +102,51 @@
       <file leaf-file-name="RechargeFlow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1485">
-              <caret line="156" column="61" lean-forward="true" selection-start-line="156" selection-start-column="61" selection-end-line="156" selection-end-column="61" />
+            <state relative-caret-position="594">
+              <caret line="136" column="23" lean-forward="false" selection-start-line="136" selection-start-column="23" selection-end-line="136" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Helper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/Helper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PledgeFlow.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/PledgeFlow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="438">
+              <caret line="199" column="69" lean-forward="false" selection-start-line="199" selection-start-column="69" selection-end-line="199" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="class#2169:2387" expanded="false" />
+                <element signature="e#2296#2297#0" expanded="true" />
+                <element signature="e#2376#2377#0" expanded="true" />
+                <element signature="class#2433:2631" expanded="false" />
+                <element signature="e#2549#2550#0" expanded="true" />
+                <element signature="e#2620#2621#0" expanded="true" />
+                <element signature="e#6374#6375#0" expanded="true" />
+                <element signature="e#6440#6441#0" expanded="true" />
+                <element signature="e#7124#7125#0" expanded="true" />
+                <element signature="e#7170#7171#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CollectSignaturesFlow.kt" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.corda/corda-core/3.2-corda/70014bc708023d8eb59d55a0931fe1ea86d7bbce/corda-core-3.2-corda-sources.jar!/net/corda/core/flows/CollectSignaturesFlow.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5265">
+              <caret line="205" column="12" lean-forward="false" selection-start-line="205" selection-start-column="12" selection-end-line="205" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -182,11 +163,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>refuel</find>
-      <find>requ</find>
-      <find>add</find>
-      <find>withn</find>
-      <find>getser</find>
       <find>cash</find>
       <find>requiredSigners</find>
       <find>signInitialTransaction</find>
@@ -196,7 +172,6 @@
       <find>final</find>
       <find>flow</find>
       <find>getbala</find>
-      <find>syn</find>
       <find>getCashBalance</find>
       <find>otherPartySession</find>
       <find>outpu</find>
@@ -212,6 +187,12 @@
       <find>new Command</find>
       <find>REFUEL</find>
       <find>balance</find>
+      <find>boxnu</find>
+      <find>box</find>
+      <find>boxnum</find>
+      <find>SYN</find>
+      <find>initial</find>
+      <find>syn</find>
     </findStrings>
     <replaceStrings>
       <replace>Box</replace>
@@ -1010,7 +991,6 @@
         <option value="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RechargeState.java" />
         <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/Pledger.java" />
         <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/Pledge.java" />
-        <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/PledgeFlow.java" />
         <option value="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/CashState.java" />
         <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlowResponder.java" />
         <option value="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/BoxState.java" />
@@ -1018,19 +998,20 @@
         <option value="$PROJECT_DIR$/cordapp/src/main/java/Helper.java" />
         <option value="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RefuelFeeState.java" />
         <option value="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RefuelFeeContract.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RechargeContract.java" />
+        <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java" />
+        <option value="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/Box.java" />
+        <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxFlow.java" />
         <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/BoxManager.java" />
         <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/Helper.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/AddBoxContract.java" />
-        <option value="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/Box.java" />
-        <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java" />
-        <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxFlow.java" />
-        <option value="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RechargeContract.java" />
         <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlow.java" />
+        <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/PledgeFlow.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
     <option name="width" value="1942" />
@@ -1052,10 +1033,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1147,6 +1126,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1290,7 +1271,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1330,30 +1312,23 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlow.java</url>
-          <line>224</line>
-          <properties />
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RechargeContract.java</url>
           <line>42</line>
           <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/AddBoxContract.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="41" />
+      <option name="time" value="48" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/AddBoxContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/Box.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="729">
@@ -1402,16 +1377,16 @@
           <caret line="65" column="1" lean-forward="false" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#2173:2391" expanded="false" />
-            <element signature="e#2300#2301#0" expanded="true" />
-            <element signature="e#2380#2381#0" expanded="true" />
-            <element signature="class#2437:2635" expanded="false" />
-            <element signature="e#2553#2554#0" expanded="true" />
-            <element signature="e#2624#2625#0" expanded="true" />
-            <element signature="e#6528#6529#0" expanded="true" />
-            <element signature="e#6594#6595#0" expanded="true" />
-            <element signature="e#7308#7309#0" expanded="true" />
-            <element signature="e#7354#7355#0" expanded="true" />
+            <element signature="class#2065:2283" expanded="false" />
+            <element signature="e#2192#2193#0" expanded="true" />
+            <element signature="e#2272#2273#0" expanded="true" />
+            <element signature="class#2329:2527" expanded="false" />
+            <element signature="e#2445#2446#0" expanded="true" />
+            <element signature="e#2516#2517#0" expanded="true" />
+            <element signature="e#6458#6459#0" expanded="true" />
+            <element signature="e#6524#6525#0" expanded="true" />
+            <element signature="e#7238#7239#0" expanded="true" />
+            <element signature="e#7284#7285#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1436,16 +1411,16 @@
           <caret line="65" column="1" lean-forward="false" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#2173:2391" expanded="false" />
-            <element signature="e#2300#2301#0" expanded="true" />
-            <element signature="e#2380#2381#0" expanded="true" />
-            <element signature="class#2437:2635" expanded="false" />
-            <element signature="e#2553#2554#0" expanded="true" />
-            <element signature="e#2624#2625#0" expanded="true" />
-            <element signature="e#6528#6529#0" expanded="true" />
-            <element signature="e#6594#6595#0" expanded="true" />
-            <element signature="e#7308#7309#0" expanded="true" />
-            <element signature="e#7354#7355#0" expanded="true" />
+            <element signature="class#2065:2283" expanded="false" />
+            <element signature="e#2192#2193#0" expanded="true" />
+            <element signature="e#2272#2273#0" expanded="true" />
+            <element signature="class#2329:2527" expanded="false" />
+            <element signature="e#2445#2446#0" expanded="true" />
+            <element signature="e#2516#2517#0" expanded="true" />
+            <element signature="e#6458#6459#0" expanded="true" />
+            <element signature="e#6524#6525#0" expanded="true" />
+            <element signature="e#7238#7239#0" expanded="true" />
+            <element signature="e#7284#7285#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1470,16 +1445,16 @@
           <caret line="65" column="1" lean-forward="false" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#2173:2391" expanded="false" />
-            <element signature="e#2300#2301#0" expanded="true" />
-            <element signature="e#2380#2381#0" expanded="true" />
-            <element signature="class#2437:2635" expanded="false" />
-            <element signature="e#2553#2554#0" expanded="true" />
-            <element signature="e#2624#2625#0" expanded="true" />
-            <element signature="e#6528#6529#0" expanded="true" />
-            <element signature="e#6594#6595#0" expanded="true" />
-            <element signature="e#7308#7309#0" expanded="true" />
-            <element signature="e#7354#7355#0" expanded="true" />
+            <element signature="class#2065:2283" expanded="false" />
+            <element signature="e#2192#2193#0" expanded="true" />
+            <element signature="e#2272#2273#0" expanded="true" />
+            <element signature="class#2329:2527" expanded="false" />
+            <element signature="e#2445#2446#0" expanded="true" />
+            <element signature="e#2516#2517#0" expanded="true" />
+            <element signature="e#6458#6459#0" expanded="true" />
+            <element signature="e#6524#6525#0" expanded="true" />
+            <element signature="e#7238#7239#0" expanded="true" />
+            <element signature="e#7284#7285#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1511,16 +1486,16 @@
           <caret line="65" column="1" lean-forward="false" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#2173:2391" expanded="false" />
-            <element signature="e#2300#2301#0" expanded="true" />
-            <element signature="e#2380#2381#0" expanded="true" />
-            <element signature="class#2437:2635" expanded="false" />
-            <element signature="e#2553#2554#0" expanded="true" />
-            <element signature="e#2624#2625#0" expanded="true" />
-            <element signature="e#6528#6529#0" expanded="true" />
-            <element signature="e#6594#6595#0" expanded="true" />
-            <element signature="e#7308#7309#0" expanded="true" />
-            <element signature="e#7354#7355#0" expanded="true" />
+            <element signature="class#2065:2283" expanded="false" />
+            <element signature="e#2192#2193#0" expanded="true" />
+            <element signature="e#2272#2273#0" expanded="true" />
+            <element signature="class#2329:2527" expanded="false" />
+            <element signature="e#2445#2446#0" expanded="true" />
+            <element signature="e#2516#2517#0" expanded="true" />
+            <element signature="e#6458#6459#0" expanded="true" />
+            <element signature="e#6524#6525#0" expanded="true" />
+            <element signature="e#7238#7239#0" expanded="true" />
+            <element signature="e#7284#7285#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1562,13 +1537,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/Pledger.java" />
-    <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/PledgeFlow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/TemplateClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -1590,13 +1558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/BoxManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="27" column="105" lean-forward="false" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="105" />
         </state>
       </provider>
     </entry>
@@ -1635,25 +1596,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="120" column="38" lean-forward="false" selection-start-line="120" selection-start-column="32" selection-end-line="120" selection-end-column="38" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-1215">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="120" column="38" lean-forward="false" selection-start-line="120" selection-start-column="32" selection-end-line="120" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1685,76 +1639,115 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/AddBoxContract.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.corda/corda-core/3.2-corda/70014bc708023d8eb59d55a0931fe1ea86d7bbce/corda-core-3.2-corda-sources.jar!/net/corda/core/flows/CollectSignaturesFlow.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="5265">
+          <caret line="205" column="12" lean-forward="false" selection-start-line="205" selection-start-column="12" selection-end-line="205" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2160">
+          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RechargeContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="57" column="79" lean-forward="false" selection-start-line="57" selection-start-column="79" selection-end-line="57" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/Helper.java">
+    <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="594">
+          <caret line="136" column="23" lean-forward="false" selection-start-line="136" selection-start-column="23" selection-end-line="136" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/BoxManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/Box.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="1193">
+          <caret line="68" column="36" lean-forward="false" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/Helper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxFlow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        <state relative-caret-position="-162">
+          <caret line="89" column="20" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java">
+    <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/AddBoxContract.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="156" column="61" lean-forward="true" selection-start-line="156" selection-start-column="61" selection-end-line="156" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/RechargeContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="57" column="79" lean-forward="false" selection-start-line="57" selection-start-column="79" selection-end-line="57" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="162">
+          <caret line="74" column="35" lean-forward="false" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="101" column="43" lean-forward="true" selection-start-line="101" selection-start-column="43" selection-end-line="101" selection-end-column="43" />
+        <state relative-caret-position="627">
+          <caret line="212" column="62" lean-forward="false" selection-start-line="212" selection-start-column="62" selection-end-line="212" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#2173:2391" expanded="false" />
-            <element signature="e#2300#2301#0" expanded="true" />
-            <element signature="e#2380#2381#0" expanded="true" />
-            <element signature="class#2437:2635" expanded="false" />
-            <element signature="e#2553#2554#0" expanded="true" />
-            <element signature="e#2624#2625#0" expanded="true" />
-            <element signature="e#6528#6529#0" expanded="true" />
-            <element signature="e#6594#6595#0" expanded="true" />
-            <element signature="e#7308#7309#0" expanded="true" />
-            <element signature="e#7354#7355#0" expanded="true" />
+            <element signature="class#2065:2283" expanded="false" />
+            <element signature="e#2192#2193#0" expanded="true" />
+            <element signature="e#2272#2273#0" expanded="true" />
+            <element signature="class#2329:2527" expanded="false" />
+            <element signature="e#2445#2446#0" expanded="true" />
+            <element signature="e#2516#2517#0" expanded="true" />
+            <element signature="e#6458#6459#0" expanded="true" />
+            <element signature="e#6524#6525#0" expanded="true" />
+            <element signature="e#7238#7239#0" expanded="true" />
+            <element signature="e#7284#7285#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/PledgeFlow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="199" column="69" lean-forward="false" selection-start-line="199" selection-start-column="69" selection-end-line="199" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#2169:2387" expanded="false" />
+            <element signature="e#2296#2297#0" expanded="true" />
+            <element signature="e#2376#2377#0" expanded="true" />
+            <element signature="class#2433:2631" expanded="false" />
+            <element signature="e#2549#2550#0" expanded="true" />
+            <element signature="e#2620#2621#0" expanded="true" />
+            <element signature="e#6374#6375#0" expanded="true" />
+            <element signature="e#6440#6441#0" expanded="true" />
+            <element signature="e#7124#7125#0" expanded="true" />
+            <element signature="e#7170#7171#0" expanded="true" />
           </folding>
         </state>
       </provider>

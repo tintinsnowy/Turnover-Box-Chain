@@ -12,6 +12,7 @@ import net.corda.finance.contracts.asset.Obligation;
 
 import java.security.PublicKey;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import static net.corda.core.contracts.ContractsDSL.requireSingleCommand;
@@ -44,16 +45,17 @@ public class AddBoxContract implements Contract {
         final Commands commandData  = command.getValue();
         final Set<PublicKey> setOfSigners = new HashSet<>(command.getSigners());
 
-        if (commandData instanceof Commands.Issue) {
-            verifyIssue(tx, setOfSigners);
-        } else if (commandData instanceof Commands.Transfer) {
-            verifyTransfer(tx, setOfSigners);
-        } else if (commandData instanceof Commands.Settle) {
-            verifySettle(tx, setOfSigners);
-        } else {
-            throw new IllegalArgumentException("Unrecognised command.");
-        }
+            if (commandData instanceof Commands.Issue) {
+                verifyIssue(tx, setOfSigners);
+            } else if (commandData instanceof Commands.Transfer) {
+                verifyTransfer(tx, setOfSigners);
+            } else if (commandData instanceof Commands.Settle) {
+                verifySettle(tx, setOfSigners);
+            } else {
+                throw new IllegalArgumentException("Unrecognised command.");
+            }
     }
+
 
     // This only allows one Box issuance per transaction.
     private void verifyIssue(LedgerTransaction tx, Set<PublicKey> signers){
@@ -76,12 +78,16 @@ public class AddBoxContract implements Contract {
     }
 
     private void verifyTransfer(LedgerTransaction tx, Set<PublicKey> signers) {
-        System.out.println("\n we are confirming Boxes");
+        List<Box>  inputs = tx.inputsOfType(Box.class);
+        List<Box> outputs = tx.outputsOfType(Box.class);
+        System.out.printf("\n the size of Boxes %d  and %d \n", outputs.size(), inputs.size());
+        requireThat(check ->{
 
+            return null;
+        });
     }
 
     private void verifySettle(LedgerTransaction tx, Set<PublicKey> signers) {
-
 
     }
 }

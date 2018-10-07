@@ -18,14 +18,20 @@ public class BoxManager {
                 orElseThrow(() -> new NotFoundException("No Box found with productType: " + productType));
     }
 
-    public static int getBoxBalance(String productType, ServiceHub serviceHub) {
+    public static long getBoxBalance(String productType, ServiceHub serviceHub) {
         List<StateAndRef<Box>> Boxes = getBoxesByType(productType, serviceHub);
-        System.out.println("balance for " + productType + " is " + Boxes.size());
-        return Boxes.size();
+        long balance = 0;
+        Iterator<StateAndRef<Box>> it;
+        it = Boxes.iterator();
+        while(it.hasNext()) {
+            balance += it.next().getState().component1().getNum();
+        }
+        return balance;
     }
 
     public static List<StateAndRef<Box>> getBoxesByType(String productType, ServiceHub serviceHub) {
-        List<StateAndRef<Box>> vaultStates = serviceHub.getVaultService().queryBy(Box.class).getStates();
+        QueryCriteria criteria = new QueryCriteria.VaultQueryCriteria(Vault.StateStatus.UNCONSUMED);
+        List<StateAndRef<Box>> vaultStates = serviceHub.getVaultService().queryBy(Box.class,criteria).getStates();
         List<StateAndRef<Box>> Boxes = new ArrayList<>();
         Iterator<StateAndRef<Box>> it;
         it = vaultStates.iterator();

@@ -113,7 +113,7 @@ public class RechargeFlow {
             final SignedTransaction signedTx = getServiceHub().signInitialTransaction(txBuilder);
 
             // Step 5 creating a session with the counterparty
-            FlowSession otherpartySession = initiateFlow(receiver);;
+            FlowSession otherpartySession = initiateFlow(receiver);
            // otherpartySession.send("hello the transaction num is:xxx");
 
             // Step 6: Obtaining the counterparty's signature.

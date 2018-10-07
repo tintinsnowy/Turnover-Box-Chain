@@ -20,10 +20,8 @@ public class Box implements OwnableState {
 
     private PartyAndReference issuance;
     private AbstractParty owner;
-    //private Amount<Issued<Currency>> faceValue;
-    //private Instant maturityDate;
     private String productType;
-    private double price;
+    private long num;
 
 
     //What is series
@@ -32,28 +30,26 @@ public class Box implements OwnableState {
 
     @ConstructorForDeserialization
     public Box( AbstractParty owner, //Amount<Issued<Currency>> faceValue , Instant maturityDate) {
-                    String productType, double price){
+                    String productType, long num){
 
-        //this.issuance = issuance;
         this.owner = owner;
-        //this.maturityDate = maturityDate;
         this.productType = productType;
-        this.price = price;
+        this.num = num;
     }
 
     public Box copy() {
-        return new Box(this.owner, this.productType,this.price);
+        return new Box(this.owner, this.productType,this.num);
     }
 
     public Box withoutOwner() {
         return new Box(new AnonymousParty(NullKeys.NullPublicKey.INSTANCE),
-                this.productType, this.price);
+                this.productType, this.num);
     }
 
     @Override
     public CommandAndState withNewOwner(AbstractParty newOwner) {
         return new CommandAndState(new AddBoxContract.Commands.Transfer(),
-                new Box(newOwner, this.productType, this.price));
+                new Box(newOwner, this.productType, this.num));
     }
 
     public String getProductType() {
@@ -64,6 +60,9 @@ public class Box implements OwnableState {
         return owner;
     }
 
+    public long getNum() {
+        return num;
+    }
 
 
     @Override
@@ -75,7 +74,7 @@ public class Box implements OwnableState {
 
         if (owner != null ? !owner.equals(state.owner) : state.owner != null) return false;
         if (productType != null ? !productType.equals(state.productType) : state.productType != null) return false;
-        return !(price <0 ? !(price==(state.price)) : state.price < 0 ); //-----to be checked
+        return !(num <0 ? !(num==(state.num)) : state.num < 0 ); //-----to be checked
     }
 
     @Override
@@ -83,7 +82,7 @@ public class Box implements OwnableState {
         //int result = issuance != null ? issuance.hashCode() : 0;
         int result =  owner != null ? owner.hashCode() : 0;
         //result = 31 * result + (owner != null ? owner.hashCode() : 0);
-        result = 31 * result + (price >0 ? Double.toString(price).hashCode() : 0);
+        result = 31 * result + (num >0 ? Double.toString(num).hashCode() : 0);
         //result = 31 * result + (maturityDate != null ? maturityDate.hashCode() : 0);
         return result;
     }
