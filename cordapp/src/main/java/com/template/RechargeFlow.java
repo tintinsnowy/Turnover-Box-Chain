@@ -159,7 +159,7 @@ public class RechargeFlow {
                         System.out.println( "If you have received the transfer, pls enter: Y; otherwise N:\n" );
 
                         String input =  scanner.nextLine();
-                        require.using("The Transaction is denied by the Operator: "+input,  input.equals("Y"));
+                        require.using("The Transaction is denied by the Operator: "+input,  input.equalsIgnoreCase("Y"));
                         return null;
                     });
                 }

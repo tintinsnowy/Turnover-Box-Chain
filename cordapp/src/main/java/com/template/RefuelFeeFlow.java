@@ -47,14 +47,14 @@ public class RefuelFeeFlow {
         private final Step AWAITING_PROPOSAL = new Step("======Setup PROPOSAL from Operator======");
         private final Step RECEIVING = new Step("======The Supplier(Box borrower) RECEIVED!======");
         private final Step BUILDING = new Step("======Building and verifying transaction.======");
-        private final Step SIGNING = new Step("++Signing transaction.");
-        private final Step COLLECTING = new Step("++Collecting counterparty signature.") {
+        private final Step SIGNING = new Step("=======Signing transaction.");
+        private final Step COLLECTING = new Step("======Collecting counterparty signature.") {
             @Override
             public ProgressTracker childProgressTracker() {
                 return CollectSignaturesFlow.Companion.tracker();
             }
         };
-        private final Step FINALISING = new Step("++Finalising transaction.") {
+        private final Step FINALISING = new Step("======Finalising transaction.") {
             @Override
             public ProgressTracker childProgressTracker() {
                 return FinalityFlow.Companion.tracker();
@@ -197,18 +197,15 @@ public class RefuelFeeFlow {
             }
             String productType = boxesToSettle.get(0).getState().getData().getProductType();
             Box supplierState = new Box(getOurIdentity(),productType ,OperatorInfo.numDemand);
-            Box opState = new Box(otherPartySession.getCounterparty(),productType ,OperatorInfo.numInStock-OperatorInfo.numDemand);
+            long rest = OperatorInfo.numInStock-OperatorInfo.numDemand;
+            if (rest!=0){
+                Box opState = new Box(otherPartySession.getCounterparty(),productType ,rest);
+                txBuilder.addOutputState(opState,AddBox_Contract_ID);
+            }
             txBuilder.addOutputState(supplierState, AddBox_Contract_ID)
-                    .addOutputState(opState,AddBox_Contract_ID)
-                    .addCommand(cmdSettle).addCommand(new Command<>(new RechargeContract.Commands.Transfer(),requiredSigners));
-//            RefuelFeeState outputState = new RefuelFeeState(getOurIdentity(),getOurIdentity(),
-//                    boxesToSettle.get(0).getState().getData().getProductType(), boxesToSettle.size());
-//            txBuilder.withItems(new StateAndContract(outputState, RF_CONTRACT_ID), cmdSettle);
+                     .addCommand(cmdSettle).addCommand(new Command<>(new RechargeContract.Commands.Transfer(),requiredSigners));
 
             // Stage 5. Get some cash from the vault and add a spend to our transaction builder.
-            //kotlin.Pair<txBuilder,cashSigningPubKeys>
-
-            //
             PublicKey okey =  otherPartySession.getCounterparty().getOwningKey();
             AbstractParty to = getServiceHub().getIdentityService().partyFromKey(okey);
             final  List<PublicKey> cashSigningPubKeys =Cash.generateSpend(

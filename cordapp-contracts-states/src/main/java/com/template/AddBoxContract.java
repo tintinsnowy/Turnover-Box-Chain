@@ -27,7 +27,6 @@ public class AddBoxContract implements Contract {
     public interface Commands extends CommandData {
         class Issue extends TypeOnlyCommandData implements Commands { }
         class Transfer extends TypeOnlyCommandData implements Commands {}
-        class Settle extends  TypeOnlyCommandData implements Commands {}
     }
 
     // set up some tracker
@@ -49,8 +48,6 @@ public class AddBoxContract implements Contract {
                 verifyIssue(tx, setOfSigners);
             } else if (commandData instanceof Commands.Transfer) {
                 verifyTransfer(tx, setOfSigners);
-            } else if (commandData instanceof Commands.Settle) {
-                verifySettle(tx, setOfSigners);
             } else {
                 throw new IllegalArgumentException("Unrecognised command.");
             }
@@ -87,7 +84,5 @@ public class AddBoxContract implements Contract {
         });
     }
 
-    private void verifySettle(LedgerTransaction tx, Set<PublicKey> signers) {
 
-    }
 }

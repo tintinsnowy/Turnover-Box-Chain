@@ -111,8 +111,7 @@ public class AddBoxFlow extends FlowLogic<Void> {
         subFlow(new FinalityFlow(signedTx));
         //test
         final  List<StateAndRef<Box>> boxNum  = BoxManager.getBoxesByType(productType, getServiceHub());
-        System.out.printf("The new added Boxesstate: %d\n", boxNum.size()); // it can should on the screan!
-        System.out.printf("The there should be : %d\n",boxNum.get(0).component1().getData().getNum());
+        System.out.printf("The there should be : %d this type of Boxes\n",boxNum.get(0).component1().getData().getNum());
 
         return null;
     }
