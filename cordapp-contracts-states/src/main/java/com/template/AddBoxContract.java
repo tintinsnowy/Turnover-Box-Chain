@@ -77,7 +77,6 @@ public class AddBoxContract implements Contract {
     private void verifyTransfer(LedgerTransaction tx, Set<PublicKey> signers) {
         List<Box>  inputs = tx.inputsOfType(Box.class);
         List<Box> outputs = tx.outputsOfType(Box.class);
-        System.out.printf("\n the size of Boxes %d  and %d \n", outputs.size(), inputs.size());
         requireThat(check ->{
 
             return null;
