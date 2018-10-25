@@ -7,8 +7,6 @@ import net.corda.core.contracts.TypeOnlyCommandData;
 import net.corda.core.identity.AbstractParty;
 import net.corda.core.transactions.LedgerTransaction;
 import net.corda.core.utilities.ProgressTracker;
-import net.corda.finance.contracts.asset.CommodityContract;
-import net.corda.finance.contracts.asset.Obligation;
 
 import java.security.PublicKey;
 import java.util.HashSet;

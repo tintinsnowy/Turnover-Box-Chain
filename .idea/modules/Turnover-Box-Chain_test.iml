@@ -14,7 +14,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Turnover-Box-Chain_main" />
     <orderEntry type="module" module-name="cordapp_main" />
-    <orderEntry type="module" module-name="cordapp-contracts-states_main" />
     <orderEntry type="library" name="Gradle: net.corda:corda-node-driver:3.2-corda" level="project" />
     <orderEntry type="library" name="Gradle: net.corda:corda-test-utils:3.2-corda" level="project" />
     <orderEntry type="library" name="Gradle: net.corda:corda-mock:3.2-corda" level="project" />
