@@ -14,16 +14,12 @@ import java.util.Currency;
 import java.util.List;
 import java.lang.*;
 
-// https://github.com/soumilvavikar/exchange-traded-funds/blob/f1a34335a3b7cf135f35ca350d44118cd5fd8c37/java-source/src/main/java/com/poc/State.java
-
 public class Box implements OwnableState {
 
     private PartyAndReference issuance;
     private AbstractParty owner;
     private String productType;
     private long num;
-
-
     //What is series
 //    public BoxState( AnonymousParty owner, String productType, double price) {
 //    }  // For serialization
@@ -36,7 +32,6 @@ public class Box implements OwnableState {
         this.productType = productType;
         this.num = num;
     }
-
     public Box copy() {
         return new Box(this.owner, this.productType,this.num);
     }

@@ -34,7 +34,6 @@ public class AddBoxFlow extends FlowLogic<Void> {
     /**
      * The progress tracker provides checkpoints indicating the progress of the flow to observers.
      */
-
     private final ProgressTracker.Step INITIALISING = new ProgressTracker.Step("Initialising the transaction...");
 
     private final ProgressTracker.Step BUILDING = new ProgressTracker.Step("Building the tx...");

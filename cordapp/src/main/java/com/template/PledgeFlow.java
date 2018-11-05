@@ -30,7 +30,7 @@ public class PledgeFlow {
      */
     @InitiatingFlow
     @StartableByRPC
-    public static class Initiator extends FlowLogic<Void> {
+    public static class PledgeInitiator extends FlowLogic<Void> {
 
         private final Amount<Currency> amount;
         private final long numDemand;  // the number of ProductType x should be traded
@@ -39,7 +39,7 @@ public class PledgeFlow {
         /**
          * The progress tracker provides checkpoints indicating the progress of the flow to observers.
          */
-        public Initiator(Amount<Currency> amount, long numDemand, String productType, Party counterParty) {
+        public PledgeInitiator(Amount<Currency> amount, long numDemand, String productType, Party counterParty) {
             this.amount = amount;
             this.numDemand = numDemand;
             this.productType = productType;
@@ -131,15 +131,15 @@ public class PledgeFlow {
         }
     }// end of the initiator
 
-    @InitiatedBy(Initiator.class)
+    @InitiatedBy(PledgeInitiator.class)
 /**
  The flow is annotated with InitiatedBy(IOUFlow.class),
  which means that your node will invoke IOUFlowResponder.call
  when it receives a message from a instance of Initiator running on another node
  */
-    public static class RefuelFeeFlowResponder extends FlowLogic<SignedTransaction> {
+    public static class PledgeFlowResponder extends FlowLogic<SignedTransaction> {
         private final FlowSession otherPartySession;
-        public RefuelFeeFlowResponder(FlowSession otherPartySession) {
+        public PledgeFlowResponder(FlowSession otherPartySession) {
             this.otherPartySession = otherPartySession;
         }
         private final Step RECEIVING = new Step("The Box borrower RECEIVED!");

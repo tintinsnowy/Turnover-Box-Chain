@@ -30,7 +30,7 @@ public class RefuelFeeFlow {
      */
     @InitiatingFlow
     @StartableByRPC
-    public static class Initiator extends FlowLogic<Void> {
+    public static class RefuelInitiator extends FlowLogic<Void> {
 
         private final Amount<Currency> amount;
         private final long numDemand;  // the number of ProductType x should be traded
@@ -38,7 +38,7 @@ public class RefuelFeeFlow {
         /**
          * The progress tracker provides checkpoints indicating the progress of the flow to observers.
          */
-        public Initiator(Amount<Currency> amount,  long numDemand, String productType) {
+        public RefuelInitiator(Amount<Currency> amount,  long numDemand, String productType) {
             this.amount = amount;
             this.numDemand = numDemand;
             this.productType = productType;
@@ -131,7 +131,7 @@ public class RefuelFeeFlow {
         }
     }// end of the initiator
 
-    @InitiatedBy(Initiator.class)
+    @InitiatedBy(RefuelInitiator.class)
 /**
  The flow is annotated with InitiatedBy(IOUFlow.class),
  which means that your node will invoke IOUFlowResponder.call
