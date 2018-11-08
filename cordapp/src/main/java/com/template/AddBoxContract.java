@@ -20,7 +20,6 @@ import static net.corda.core.contracts.ContractsDSL.requireThat;
 public class AddBoxContract implements Contract {
 
     public static final String AddBox_Contract_ID = "com.template.AddBoxContract";
-
     // Our Create command.
     public interface Commands extends CommandData {
         class Issue extends TypeOnlyCommandData implements Commands { }
@@ -50,8 +49,6 @@ public class AddBoxContract implements Contract {
                 throw new IllegalArgumentException("Unrecognised command.");
             }
     }
-
-
     // This only allows one Box issuance per transaction.
     private void verifyIssue(LedgerTransaction tx, Set<PublicKey> signers){
         requireThat(check -> {

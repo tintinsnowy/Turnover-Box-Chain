@@ -97,7 +97,7 @@ public class AddBoxFlow extends FlowLogic<Void> {
                .addCommand(new AddBoxContract.Commands.Issue(),requiredSigners);
         //Step3 Verifying the transaction.
         txBuilder.verify(getServiceHub());
-        //txBuilder.toWireTransaction().toLedgerTransaction(getServiceHub()).verify();
+        //txBuilder.toWireTransaction().toLedgerTransaction(getServiceHu    b()).verify();
         progressTracker.setCurrentStep(VERIFY);
 
         //Step 4 signing the contract

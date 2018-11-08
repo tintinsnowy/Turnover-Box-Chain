@@ -82,8 +82,6 @@ public class RechargeContract implements Contract {
             check.using("output states are issued by a command signer", signers.contains(out.getOwner().getOwningKey()));
             return null;
         });
-
-
     }
 
 

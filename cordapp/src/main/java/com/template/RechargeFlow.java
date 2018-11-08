@@ -31,7 +31,7 @@ public class RechargeFlow {
 // the partners submit the RechargeFlow
     @InitiatingFlow
     @StartableByRPC
-    public static class Initiator extends FlowLogic<Void> {
+    public static class RechargeInitiator extends FlowLogic<Void> {
         private Amount<Currency> amount;
         private AbstractParty theParty;// the Party which deposits.
         //private Party otherParty;
@@ -72,7 +72,7 @@ public class RechargeFlow {
             return progressTracker;
         }
 
-        public Initiator(Amount<Currency>amount, AbstractParty theParty) {
+        public RechargeInitiator(Amount<Currency>amount, AbstractParty theParty) {
             this.amount = amount;
             this.theParty = theParty;
             //this.otherParty = otherParty;
@@ -130,11 +130,11 @@ public class RechargeFlow {
     }
 
 
-    @InitiatedBy(Initiator.class)
-    public static class Responder extends FlowLogic<Void> {
+    @InitiatedBy(RechargeInitiator.class)
+    public static class RechargeResponder extends FlowLogic<Void> {
         private FlowSession counterpartySession;
 
-        public Responder(FlowSession counterpartySession) {
+        public RechargeResponder(FlowSession counterpartySession) {
             this.counterpartySession = counterpartySession;
         }
         /**

@@ -16,7 +16,7 @@ import java.lang.*;
 
 public class Box implements OwnableState {
 
-    private PartyAndReference issuance;
+    //private PartyAndReference issuance;
     private AbstractParty owner;
     private String productType;
     private long num;

@@ -137,9 +137,9 @@ public class RefuelFeeFlow {
  which means that your node will invoke IOUFlowResponder.call
  when it receives a message from a instance of Initiator running on another node
  */
-    public static class RefuelFeeFlowResponder extends FlowLogic<SignedTransaction> {
+    public static class RefuelFeeResponder extends FlowLogic<SignedTransaction> {
         private final FlowSession otherPartySession;
-        public RefuelFeeFlowResponder(FlowSession otherPartySession) {
+        public RefuelFeeResponder(FlowSession otherPartySession) {
             this.otherPartySession = otherPartySession;
         }
         private final Step RECEIVING = new Step("The Supplier(Box borrower) RECEIVED!");
