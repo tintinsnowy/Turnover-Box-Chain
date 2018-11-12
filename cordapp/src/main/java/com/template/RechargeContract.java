@@ -78,6 +78,7 @@ public class RechargeContract implements Contract {
             final AbstractParty owner = out.getOwner();
             String name = owner.nameOrNull().getOrganisation();
             check.using("The Owner shouldn't be operator!  ", !name.equals("Operator"));
+            check.using("The deposited amount should be greater than 0", out.getAmount().getQuantity()>0);
             pt.setCurrentStep(STEP3);
             check.using("output states are issued by a command signer", signers.contains(out.getOwner().getOwningKey()));
             return null;

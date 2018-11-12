@@ -1,0 +1,46 @@
+[INFO ] 2018-11-11T17:17:26,583Z [main] manifests.Manifests.info - 111 attributes loaded from 123 stream(s) in 2s, 111 saved, 1956 ignored: ["ActiveMQ-Version", "Agent-Class", "Ant-Version", "Application-Class", "Application-Library-Allowable-Codebase", "Application-Name", "Application-Version", "Archiver-Version", "Automatic-Module-Name", "Bnd-LastModified", "Branch", "Build-Date", "Build-Host", "Build-Id", "Build-Java-Version", "Build-Jdk", "Build-Job", "Build-Number", "Build-Timestamp", "Built-By", "Built-OS", "Built-Status", "Bundle-Activator", "Bundle-Category", "Bundle-ClassPath", "Bundle-Copyright", "Bundle-Description", "Bundle-DocURL", "Bundle-License", "Bundle-ManifestVersion", "Bundle-Name", "Bundle-RequiredExecutionEnvironment", "Bundle-SymbolicName", "Bundle-Vendor", "Bundle-Version", "Caller-Allowable-Codebase", "Can-Redefine-Classes", "Can-Retransform-Classes", "Can-Set-Native-Method-Prefix", "Caplets", "Change", "Codebase", "Corda-Platform-Version", "Corda-Release-Version", "Corda-Revision", "Corda-Vendor", "Created-By", "DynamicImport-Package", "Eclipse-BuddyPolicy", "Eclipse-LazyStart", "Export-Package", "Extension-Name", "Fragment-Host", "Gradle-Version", "Ignore-Package", "Implementation-Build", "Implementation-Build-Date", "Implementation-Title", "Implementation-URL", "Implementation-Url", "Implementation-Vendor", "Implementation-Vendor-Id", "Implementation-Version", "Import-Package", "Include-Resource", "JCabi-Build", "JCabi-Date", "JCabi-Version", "JVM-Args", "Java-Agents", "Java-Vendor", "Java-Version", "Kotlin-Runtime-Component", "Kotlin-Version", "Log4jReleaseKey", "Log4jReleaseManager", "Log4jReleaseVersion", "Main-Class", "Main-class", "Manifest-Version", "Min-Java-Version", "Min-Update-Version", "Module-Email", "Module-Origin", "Module-Owner", "Module-Source", "Multi-Release", "Originally-Created-By", "Os-Arch", "Os-Name", "Os-Version", "Package", "Permissions", "Premain-Class", "Private-Package", "Provide-Capability", "Require-Capability", "SCM-Revision", "SCM-url", "Scm-Connection", "Scm-Revision", "Scm-Url", "Service-Component", "Specification-Title", "Specification-Vendor", "Specification-Version", "System-Properties", "Tool", "Trusted-Library", "X-Compile-Source-JDK", "X-Compile-Target-JDK"] {}
+[INFO ] 2018-11-11T17:17:26,957Z [main] BasicInfo.printBasicNodeInfo - Logs can be found in                    : D:\ubuntu\Turnover-Box-Chain\logs {}
+[ERROR] 2018-11-11T17:17:27,077Z [main] internal.Node.run - Exception during node configuration {}
+com.typesafe.config.ConfigException$IO: D:\ubuntu\Turnover-Box-Chain\node.conf: java.io.FileNotFoundException: D:\ubuntu\Turnover-Box-Chain\node.conf (The system cannot find the file specified)
+	at com.typesafe.config.impl.Parseable.parseValue(Parseable.java:188) ~[corda.jar:?]
+	at com.typesafe.config.impl.Parseable.parseValue(Parseable.java:174) ~[corda.jar:?]
+	at com.typesafe.config.impl.Parseable.parse(Parseable.java:299) ~[corda.jar:?]
+	at com.typesafe.config.ConfigFactory.parseFile(ConfigFactory.java:688) ~[corda.jar:?]
+	at net.corda.node.services.config.ConfigHelper.loadConfig(ConfigUtilities.kt:30) ~[corda-node-3.2-corda.jar:?]
+	at net.corda.node.services.config.ConfigHelper.loadConfig$default(ConfigUtilities.kt:27) ~[corda-node-3.2-corda.jar:?]
+	at net.corda.node.CmdLineOptions.loadConfig(ArgsParser.kt:97) ~[corda-node-3.2-corda.jar:?]
+	at net.corda.node.internal.NodeStartup.loadConfigFile(NodeStartup.kt:209) ~[corda-node-3.2-corda.jar:?]
+	at net.corda.node.internal.NodeStartup.run(NodeStartup.kt:76) [corda-node-3.2-corda.jar:?]
+	at net.corda.node.Corda.main(Corda.kt:13) [corda-node-3.2-corda.jar:?]
+Caused by: java.io.FileNotFoundException: D:\ubuntu\Turnover-Box-Chain\node.conf (The system cannot find the file specified)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_172]
+	at java.io.FileInputStream.open(Unknown Source) ~[?:1.8.0_172]
+	at java.io.FileInputStream.<init>(Unknown Source) ~[?:1.8.0_172]
+	at com.typesafe.config.impl.Parseable$ParseableFile.reader(Parseable.java:638) ~[corda.jar:?]
+	at com.typesafe.config.impl.Parseable.reader(Parseable.java:99) ~[corda.jar:?]
+	at com.typesafe.config.impl.Parseable.rawParseValue(Parseable.java:231) ~[corda.jar:?]
+	at com.typesafe.config.impl.Parseable.parseValue(Parseable.java:180) ~[corda.jar:?]
+	... 9 more
+[INFO ] 2018-11-11T17:17:57,316Z [main] manifests.Manifests.info - 111 attributes loaded from 123 stream(s) in 1s, 111 saved, 1956 ignored: ["ActiveMQ-Version", "Agent-Class", "Ant-Version", "Application-Class", "Application-Library-Allowable-Codebase", "Application-Name", "Application-Version", "Archiver-Version", "Automatic-Module-Name", "Bnd-LastModified", "Branch", "Build-Date", "Build-Host", "Build-Id", "Build-Java-Version", "Build-Jdk", "Build-Job", "Build-Number", "Build-Timestamp", "Built-By", "Built-OS", "Built-Status", "Bundle-Activator", "Bundle-Category", "Bundle-ClassPath", "Bundle-Copyright", "Bundle-Description", "Bundle-DocURL", "Bundle-License", "Bundle-ManifestVersion", "Bundle-Name", "Bundle-RequiredExecutionEnvironment", "Bundle-SymbolicName", "Bundle-Vendor", "Bundle-Version", "Caller-Allowable-Codebase", "Can-Redefine-Classes", "Can-Retransform-Classes", "Can-Set-Native-Method-Prefix", "Caplets", "Change", "Codebase", "Corda-Platform-Version", "Corda-Release-Version", "Corda-Revision", "Corda-Vendor", "Created-By", "DynamicImport-Package", "Eclipse-BuddyPolicy", "Eclipse-LazyStart", "Export-Package", "Extension-Name", "Fragment-Host", "Gradle-Version", "Ignore-Package", "Implementation-Build", "Implementation-Build-Date", "Implementation-Title", "Implementation-URL", "Implementation-Url", "Implementation-Vendor", "Implementation-Vendor-Id", "Implementation-Version", "Import-Package", "Include-Resource", "JCabi-Build", "JCabi-Date", "JCabi-Version", "JVM-Args", "Java-Agents", "Java-Vendor", "Java-Version", "Kotlin-Runtime-Component", "Kotlin-Version", "Log4jReleaseKey", "Log4jReleaseManager", "Log4jReleaseVersion", "Main-Class", "Main-class", "Manifest-Version", "Min-Java-Version", "Min-Update-Version", "Module-Email", "Module-Origin", "Module-Owner", "Module-Source", "Multi-Release", "Originally-Created-By", "Os-Arch", "Os-Name", "Os-Version", "Package", "Permissions", "Premain-Class", "Private-Package", "Provide-Capability", "Require-Capability", "SCM-Revision", "SCM-url", "Scm-Connection", "Scm-Revision", "Scm-Url", "Service-Component", "Specification-Title", "Specification-Vendor", "Specification-Version", "System-Properties", "Tool", "Trusted-Library", "X-Compile-Source-JDK", "X-Compile-Target-JDK"] {}
+[INFO ] 2018-11-11T17:17:57,720Z [main] BasicInfo.printBasicNodeInfo - Logs can be found in                    : D:\ubuntu\Turnover-Box-Chain\logs {}
+[ERROR] 2018-11-11T17:17:57,840Z [main] internal.Node.run - Exception during node configuration {}
+com.typesafe.config.ConfigException$IO: D:\ubuntu\Turnover-Box-Chain\node.conf: java.io.FileNotFoundException: D:\ubuntu\Turnover-Box-Chain\node.conf (The system cannot find the file specified)
+	at com.typesafe.config.impl.Parseable.parseValue(Parseable.java:188) ~[corda.jar:?]
+	at com.typesafe.config.impl.Parseable.parseValue(Parseable.java:174) ~[corda.jar:?]
+	at com.typesafe.config.impl.Parseable.parse(Parseable.java:299) ~[corda.jar:?]
+	at com.typesafe.config.ConfigFactory.parseFile(ConfigFactory.java:688) ~[corda.jar:?]
+	at net.corda.node.services.config.ConfigHelper.loadConfig(ConfigUtilities.kt:30) ~[corda-node-3.2-corda.jar:?]
+	at net.corda.node.services.config.ConfigHelper.loadConfig$default(ConfigUtilities.kt:27) ~[corda-node-3.2-corda.jar:?]
+	at net.corda.node.CmdLineOptions.loadConfig(ArgsParser.kt:97) ~[corda-node-3.2-corda.jar:?]
+	at net.corda.node.internal.NodeStartup.loadConfigFile(NodeStartup.kt:209) ~[corda-node-3.2-corda.jar:?]
+	at net.corda.node.internal.NodeStartup.run(NodeStartup.kt:76) [corda-node-3.2-corda.jar:?]
+	at net.corda.node.Corda.main(Corda.kt:13) [corda-node-3.2-corda.jar:?]
+Caused by: java.io.FileNotFoundException: D:\ubuntu\Turnover-Box-Chain\node.conf (The system cannot find the file specified)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_172]
+	at java.io.FileInputStream.open(Unknown Source) ~[?:1.8.0_172]
+	at java.io.FileInputStream.<init>(Unknown Source) ~[?:1.8.0_172]
+	at com.typesafe.config.impl.Parseable$ParseableFile.reader(Parseable.java:638) ~[corda.jar:?]
+	at com.typesafe.config.impl.Parseable.reader(Parseable.java:99) ~[corda.jar:?]
+	at com.typesafe.config.impl.Parseable.rawParseValue(Parseable.java:231) ~[corda.jar:?]
+	at com.typesafe.config.impl.Parseable.parseValue(Parseable.java:180) ~[corda.jar:?]
+	... 9 more

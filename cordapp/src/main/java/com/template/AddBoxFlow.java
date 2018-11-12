@@ -12,6 +12,8 @@ import net.corda.core.utilities.ProgressTracker;
 
 import javax.annotation.Nullable;
 import java.security.PublicKey;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -76,6 +78,8 @@ public class AddBoxFlow extends FlowLogic<Void> {
     @Override
     public Void call() throws FlowException {
         // We retrieve the notary identity from the network map.
+        Instant currentTime = getServiceHub().getClock().instant();
+
         final Party notary = getServiceHub().getNetworkMapCache().getNotaryIdentities().get(0);
 
      // We create a transaction builder.
@@ -109,6 +113,10 @@ public class AddBoxFlow extends FlowLogic<Void> {
         //test
         final  List<StateAndRef<Box>> boxNum  = BoxManager.getBoxesByType(productType, getServiceHub());
         System.out.printf("The there should be : %d this type of Boxes\n",boxNum.get(0).component1().getData().getNum());
+
+        Instant endTime = getServiceHub().getClock().instant();
+        Duration between = Duration.between(currentTime, endTime);
+        System.out.println("==========The process for AddBoxFlow cost "+between+"=============");
 
         return null;
     }

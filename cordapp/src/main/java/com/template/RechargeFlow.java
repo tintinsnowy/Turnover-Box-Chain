@@ -156,7 +156,8 @@ public class RechargeFlow {
                         require.using("This must be an Recharge transaction.", output instanceof Cash.State);
                         Cash.State iou = (Cash.State) output;
                         require.using("The Recharge value can't be under 0.", iou.getAmount().getQuantity()> 0);
-                        System.out.println( "If you have received the transfer, pls enter: Y; otherwise N:\n" );
+                        System.out.printf( "If you have received the transfer from %s, pls enter: Y; otherwise N:\n",
+                                ((Cash.State) output).component2().toString() );
 
                         String input =  scanner.nextLine();
                         require.using("The Transaction is denied by the Operator: "+input,  input.equalsIgnoreCase("Y"));

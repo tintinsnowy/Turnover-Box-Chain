@@ -49,7 +49,7 @@ public class PledgeFlow {
         private final Step AWAITING_PROPOSAL = new Step("======Setup PROPOSAL from Operator======");
         private final Step RECEIVING = new Step("======The Supplier(Box borrower) RECEIVED!======");
         private final Step BUILDING = new Step("======Building and verifying transaction.======");
-        private final Step SIGNING = new Step("++Signing transaction.");
+        private final Step SIGNING = new Step("=======Signing transaction.=======");
         private final Step COLLECTING = new Step("++Collecting counterparty signature.") {
             @Override
             public ProgressTracker childProgressTracker() {

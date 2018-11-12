@@ -17,6 +17,9 @@ import net.corda.core.utilities.UntrustworthyData;
 import net.corda.finance.contracts.asset.Cash;
 
 import java.security.PublicKey;
+import java.time.Clock;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.*;
 
 import static com.template.AddBoxContract.AddBox_Contract_ID;
@@ -204,7 +207,7 @@ public class RefuelFeeFlow {
             }
             txBuilder.addOutputState(supplierState, AddBox_Contract_ID)
                      .addCommand(cmdSettle).addCommand(new Command<>(new RechargeContract.Commands.Transfer(),requiredSigners));
-
+            Instant currentTime = getServiceHub().getClock().instant();
             // Stage 5. Get some cash from the vault and add a spend to our transaction builder.
             PublicKey okey =  otherPartySession.getCounterparty().getOwningKey();
             AbstractParty to = getServiceHub().getIdentityService().partyFromKey(okey);
@@ -217,8 +220,6 @@ public class RefuelFeeFlow {
 
             SignedTransaction partSignedTx = getServiceHub().signInitialTransaction(txBuilder, cashSigningPubKeys);
             txBuilder.verify(getServiceHub());
-
-            //currentTime = ServiceHub.clock.instant();
             //tx.setTimeWindow(currentTime, 30.seconds)
             progressTracker.setCurrentStep(SIGNING);
             // STEP 6: Sync up confidential identities in the transaction with our counterparty
@@ -235,7 +236,9 @@ public class RefuelFeeFlow {
 //            @Suspendable
 //            private assembleSharedTX (StateAndRef<Box> assetForSale, tradeRequest: SellerTradeInfo, buyerAnonymousIdentity: PartyAndCertificate): SharedTx {
 //                val ptx = TransactionBuilder(notary)
-
+            Instant endTime = getServiceHub().getClock().instant();
+            Duration between = Duration.between(currentTime, endTime);
+            System.out.println("==========The process for RefuelFeeFlow cost "+between+"=============");
             return null;
         }
     }

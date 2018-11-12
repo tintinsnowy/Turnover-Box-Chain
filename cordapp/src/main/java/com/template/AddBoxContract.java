@@ -63,6 +63,9 @@ public class AddBoxContract implements Contract {
             String name = owner.nameOrNull().getOrganisation();
             check.using("The Owner isn't operator!.but "+owner.nameOrNull().getOrganisation(),
                     name.equals("Operator"));
+            check.using("The number of Turnoverboxes should be positive Integer",
+                    out.getNum()>0 );
+
             pt.setCurrentStep(STEP3);
             check.using("output states are issued by a command signer", signers.contains(out.getOwner().getOwningKey()));
             return null;

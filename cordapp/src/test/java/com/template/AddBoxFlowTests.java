@@ -13,6 +13,9 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import java.time.Duration;
+import java.time.Instant;
+
 
 public class AddBoxFlowTests {
     @Rule
@@ -39,7 +42,15 @@ public class AddBoxFlowTests {
     @Test
     public void test() throws Exception {
         AddBoxFlow flow = new AddBoxFlow("Normal", 50);
-        operator.startFlow(flow).toString();
+
+        System.out.println("================hello===================");
+//        Instant currentTime = getClock().instant();
+
+        operator.startFlow(flow);
+//        Instant endTime = getServiceHub().getClock().instant();
+//        Duration between = Duration.between(currentTime, endTime);
+//        System.out.println("==========The process for RefuelFeeFlow cost "+between+"=============");
+
         network.runNetwork();
     }
 }
