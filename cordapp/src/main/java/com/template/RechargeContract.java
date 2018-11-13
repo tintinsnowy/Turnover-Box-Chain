@@ -56,7 +56,8 @@ public class RechargeContract implements Contract {
     }
 
     private void verifyTransfer(LedgerTransaction tx, Set<PublicKey> signers) {
-        System.out.println("\n we are confirming Cash");
+        final Cash.State out = tx.inputsOfType(Cash.State.class).get(0);
+        System.out.println("\n we are confirming Cash from "+ out.getOwner());
 
     }
 

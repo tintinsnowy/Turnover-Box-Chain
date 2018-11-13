@@ -57,7 +57,7 @@ public class RefuelFeeFlow {
                 return CollectSignaturesFlow.Companion.tracker();
             }
         };
-        private final Step FINALISING = new Step("======Finalising transaction.") {
+        private final Step FINALISING = new Step("======Finalising transaction.========") {
             @Override
             public ProgressTracker childProgressTracker() {
                 return FinalityFlow.Companion.tracker();
@@ -117,7 +117,6 @@ public class RefuelFeeFlow {
                 protected void checkTransaction(SignedTransaction stx) {
                     requireThat(require -> {
                         ContractState output = stx.getTx().getOutputs().get(0).getData();
-                        System.out.println(output);
                         //require.using("This must be an Recharge transaction.", output instanceof Cash.State);
                         return null;
                     });
@@ -167,8 +166,6 @@ public class RefuelFeeFlow {
             Helper.LenderInfo OperatorInfo = tempInfo.unwrap(data -> data);
 
             // STEP2> CONFIRMING
-            System.out.println(" the size of Boxes: "+ boxesToSettle.get(0).getState().getData().getProductType()+
-                    " is " + boxesToSettle.size());
             //Scanner scanner = new Scanner( System.in );
             // System.out.println("\n If it is what you want or not, pls Enter(Y/N) \n");
             //String input =  scanner.nextLine();
@@ -178,7 +175,7 @@ public class RefuelFeeFlow {
             //STEP 3> to check whether the hassupplier has enough money
             // final Amount<Currency> cashBalance = getCashBalance(getServiceHub(), OperatorInfo.amount.getToken());
             final Amount<Currency> cashBalance = getCashBalance(getServiceHub(), OperatorInfo.amount.getToken());
-            System.out.println("\n " + cashBalance.toString());
+            System.out.println("Supplier has " + cashBalance.toString()+ " in account.\n");
             if (cashBalance.getQuantity() < OperatorInfo.amount.getQuantity()) {
                 throw new FlowException(String.format(
                         "Proposer has only %s but needs %s to settle.", cashBalance, OperatorInfo.amount));

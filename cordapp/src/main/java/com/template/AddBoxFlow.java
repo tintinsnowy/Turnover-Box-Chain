@@ -11,6 +11,11 @@ import net.corda.core.utilities.ProgressTracker;
 
 
 import javax.annotation.Nullable;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.OpenOption;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.security.PublicKey;
 import java.time.Duration;
 import java.time.Instant;
@@ -111,13 +116,20 @@ public class AddBoxFlow extends FlowLogic<Void> {
         // Finalising the transaction.
         subFlow(new FinalityFlow(signedTx));
         //test
-        final  List<StateAndRef<Box>> boxNum  = BoxManager.getBoxesByType(productType, getServiceHub());
-        System.out.printf("The there should be : %d this type of Boxes\n",boxNum.get(0).component1().getData().getNum());
 
         Instant endTime = getServiceHub().getClock().instant();
         Duration between = Duration.between(currentTime, endTime);
-        System.out.println("==========The process for AddBoxFlow cost "+between+"=============");
+        String contentToAppend = "==========The process for AddBoxFlow cost "+between+"=============\n";
+        System.out.println(contentToAppend);
 
+        String fileName = "D:\\ubuntu\\Turnover-Box-Chain\\addboxP.txt";
+        try {
+            Files.write(
+                    Paths.get(fileName),
+                    (between.toString()+System.lineSeparator()).getBytes(), StandardOpenOption.APPEND);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 }

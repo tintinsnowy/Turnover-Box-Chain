@@ -3,40 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="999933bd-e9b0-4a70-8b0c-6dc3c0b084a4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/AddBoxContract$Commands$Issue.class" afterPath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/AddBoxContract$Commands$Issue.class" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/AddBoxContract$Commands$Transfer.class" afterPath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/AddBoxContract$Commands$Transfer.class" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/AddBoxContract.class" afterPath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/AddBoxContract.class" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/AddBoxFlow$1.class" afterPath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/AddBoxFlow$1.class" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/AddBoxFlow$2.class" afterPath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/AddBoxFlow$2.class" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/AddBoxFlow.class" afterPath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/AddBoxFlow.class" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/Box.class" afterPath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/Box.class" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/PledgeFlow$Initiator$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/PledgeFlow$Initiator$1SignTxFlow.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/PledgeFlow$Initiator$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/PledgeFlow$Initiator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/PledgeFlow$RefuelFeeFlowResponder.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/PledgeFlow.class" afterPath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/PledgeFlow.class" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/RechargeContract.class" afterPath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/RechargeContract.class" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/RechargeFlow$Initiator$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/RechargeFlow$Initiator$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/RechargeFlow$Initiator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/RechargeFlow$Responder$1SignTxFlow.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/RechargeFlow$Responder.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/RechargeFlow.class" afterPath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/RechargeFlow.class" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/RefuelFeeFlow$Initiator$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/RefuelFeeFlow$Initiator$1SignTxFlow.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/RefuelFeeFlow$Initiator$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/RefuelFeeFlow$Initiator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/RefuelFeeFlow$RefuelFeeFlowResponder.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/RefuelFeeFlow.class" afterPath="$PROJECT_DIR$/cordapp/out/production/classes/com/template/RefuelFeeFlow.class" />
-      <change beforePath="$PROJECT_DIR$/cordapp/out/test/classes/com/template/AddBoxFlowTests.class" afterPath="$PROJECT_DIR$/cordapp/out/test/classes/com/template/AddBoxFlowTests.class" />
-      <change beforePath="$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxContract.java" afterPath="$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxContract.java" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change beforePath="$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxFlow.java" afterPath="$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxFlow.java" />
-      <change beforePath="$PROJECT_DIR$/cordapp/src/main/java/com/template/PledgeFlow.java" afterPath="$PROJECT_DIR$/cordapp/src/main/java/com/template/PledgeFlow.java" />
       <change beforePath="$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeContract.java" afterPath="$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeContract.java" />
-      <change beforePath="$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java" afterPath="$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java" />
       <change beforePath="$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlow.java" afterPath="$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlow.java" />
-      <change beforePath="$PROJECT_DIR$/cordapp/src/test/java/com/template/AddBoxFlowTests.java" afterPath="$PROJECT_DIR$/cordapp/src/test/java/com/template/AddBoxFlowTests.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -74,7 +44,7 @@
       <file leaf-file-name="Box.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/Box.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="999">
+            <state relative-caret-position="703">
               <caret line="53" column="33" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -88,7 +58,7 @@
       <file leaf-file-name="AddBoxFlow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxFlow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="789">
+            <state relative-caret-position="540">
               <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -98,21 +68,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RechargeContract.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RechargeContract.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeContract.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1566">
-              <caret line="73" column="37" lean-forward="false" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
+            <state relative-caret-position="744">
+              <caret line="80" column="88" lean-forward="true" selection-start-line="80" selection-start-column="88" selection-end-line="80" selection-end-column="88" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddBoxContract.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddBoxContract.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxContract.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="68" column="37" lean-forward="true" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
+            <state relative-caret-position="478">
+              <caret line="68" column="37" lean-forward="false" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,7 +93,7 @@
       <file leaf-file-name="Helper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/Helper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
+            <state relative-caret-position="418">
               <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
               <folding />
             </state>
@@ -133,7 +103,7 @@
       <file leaf-file-name="PledgeFlow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/PledgeFlow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
+            <state relative-caret-position="570">
               <caret line="51" column="81" lean-forward="false" selection-start-line="51" selection-start-column="81" selection-end-line="51" selection-end-column="81" />
               <folding>
                 <element signature="method#call#0;class#PledgeFlowResponder#0;class#PledgeFlow#0" expanded="false" />
@@ -142,23 +112,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddBoxFlowTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cordapp/src/test/java/com/template/AddBoxFlowTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RefuelFeeFlow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="209" column="28" lean-forward="false" selection-start-line="209" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+            <state relative-caret-position="364">
+              <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -167,8 +125,8 @@
       <file leaf-file-name="RechargeFlow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3078">
-              <caret line="152" column="63" lean-forward="false" selection-start-line="152" selection-start-column="63" selection-end-line="152" selection-end-column="63" />
+            <state relative-caret-position="2489">
+              <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
               <folding>
                 <element signature="method#RechargeInitiator#0;class#RechargeInitiator#0;class#RechargeFlow#0" expanded="false" />
                 <element signature="docComment;method#call#0;class#RechargeResponder#0;class#RechargeFlow#0" expanded="false" />
@@ -180,8 +138,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3321">
-              <caret line="123" column="29" lean-forward="false" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
+            <state relative-caret-position="478">
+              <caret line="155" column="9" lean-forward="false" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -607,8 +565,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="7702348640471" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="1176748717" />
+        <entry key="$PROJECT_DIR$" value="7703907730345" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="1130846793" />
         <entry key="$PROJECT_DIR$/cordapp-contracts-states/build.gradle" value="965871032" />
         <entry key="$PROJECT_DIR$/cordapp/build.gradle" value="2666299659" />
         <entry key="$PROJECT_DIR$/gradle.properties" value="3111106367" />
@@ -902,22 +860,22 @@
         <option value="$PROJECT_DIR$/cordapp-contracts-states/src/main/java/com/template/AddBoxContract.java" />
         <option value="$PROJECT_DIR$/cordapp/build.gradle" />
         <option value="$PROJECT_DIR$/settings.gradle" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/cordapp/src/test/java/com/template/FlowTests.java" />
         <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/TemplateClient.java" />
         <option value="$PROJECT_DIR$/.idea/compiler.xml" />
         <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/Box.java" />
-        <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlow.java" />
         <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/PledgeFlow.java" />
         <option value="$PROJECT_DIR$/cordapp/src/test/java/com/template/AddBoxFlowTests.java" />
-        <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxFlow.java" />
-        <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeContract.java" />
         <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java" />
         <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxContract.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxFlow.java" />
+        <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlow.java" />
+        <option value="$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeContract.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
     <option name="width" value="1942" />
@@ -939,7 +897,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1010,9 +971,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1219,7 +1177,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1229,20 +1187,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2298066" sideWeight="0.31770834" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.6822917" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18541667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08229167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1380,17 +1338,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cordapp-contracts-states/build.gradle" />
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="120" column="38" lean-forward="false" selection-start-line="120" selection-start-column="32" selection-end-line="120" selection-end-column="38" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-1215">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="120" column="38" lean-forward="false" selection-start-line="120" selection-start-column="32" selection-end-line="120" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1495,7 +1453,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/Box.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="999">
+        <state relative-caret-position="703">
           <caret line="53" column="33" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1507,56 +1465,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/Helper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
+        <state relative-caret-position="418">
           <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/PledgeFlow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="51" column="81" lean-forward="false" selection-start-line="51" selection-start-column="81" selection-end-line="51" selection-end-column="81" />
-          <folding>
-            <element signature="method#call#0;class#PledgeFlowResponder#0;class#PledgeFlow#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cordapp/src/test/java/com/template/AddBoxFlowTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3321">
-          <caret line="123" column="29" lean-forward="false" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1566">
-          <caret line="73" column="37" lean-forward="false" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3078">
-          <caret line="152" column="63" lean-forward="false" selection-start-line="152" selection-start-column="63" selection-end-line="152" selection-end-column="63" />
-          <folding>
-            <element signature="method#RechargeInitiator#0;class#RechargeInitiator#0;class#RechargeFlow#0" expanded="false" />
-            <element signature="docComment;method#call#0;class#RechargeResponder#0;class#RechargeFlow#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1568,17 +1479,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlow.java">
+    <entry file="file://$PROJECT_DIR$/cordapp/src/test/java/com/template/AddBoxFlowTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="209" column="28" lean-forward="false" selection-start-line="209" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+        <state relative-caret-position="243">
+          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeFlow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2489">
+          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+          <folding>
+            <element signature="method#RechargeInitiator#0;class#RechargeInitiator#0;class#RechargeFlow#0" expanded="false" />
+            <element signature="docComment;method#call#0;class#RechargeResponder#0;class#RechargeFlow#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="155" column="9" lean-forward="false" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxFlow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="789">
+        <state relative-caret-position="540">
           <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1589,11 +1521,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/AddBoxContract.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="68" column="37" lean-forward="true" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
+        <state relative-caret-position="478">
+          <caret line="68" column="37" lean-forward="false" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/PledgeFlow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="51" column="81" lean-forward="false" selection-start-line="51" selection-start-column="81" selection-end-line="51" selection-end-column="81" />
+          <folding>
+            <element signature="method#call#0;class#PledgeFlowResponder#0;class#PledgeFlow#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RefuelFeeFlow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cordapp/src/main/java/com/template/RechargeContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="80" column="88" lean-forward="true" selection-start-line="80" selection-start-column="88" selection-end-line="80" selection-end-column="88" />
+          <folding />
         </state>
       </provider>
     </entry>
