@@ -2,6 +2,7 @@ package com.template;
 
 import co.paralleluniverse.fibers.Suspendable;
 import com.google.common.collect.ImmutableList;
+import kotlin.Pair;
 import net.corda.confidential.IdentitySyncFlow;
 import net.corda.core.contracts.*;
 import net.corda.core.flows.*;
@@ -9,6 +10,7 @@ import net.corda.core.flows.*;
 import net.corda.core.identity.AbstractParty;
 import net.corda.core.identity.CordaX500Name;
 import net.corda.core.identity.Party;
+import net.corda.core.identity.PartyAndCertificate;
 import net.corda.core.transactions.SignedTransaction;
 import net.corda.core.transactions.TransactionBuilder;
 import net.corda.core.utilities.ProgressTracker;
@@ -16,6 +18,10 @@ import net.corda.core.utilities.ProgressTracker.Step;
 import net.corda.core.utilities.UntrustworthyData;
 import net.corda.finance.contracts.asset.Cash;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.security.PublicKey;
 import java.time.Clock;
 import java.time.Duration;
@@ -50,8 +56,8 @@ public class RefuelFeeFlow {
         private final Step AWAITING_PROPOSAL = new Step("======Setup PROPOSAL from Operator======");
         private final Step RECEIVING = new Step("======The Supplier(Box borrower) RECEIVED!======");
         private final Step BUILDING = new Step("======Building and verifying transaction.======");
-        private final Step SIGNING = new Step("=======Signing transaction.");
-        private final Step COLLECTING = new Step("======Collecting counterparty signature.") {
+        private final Step SIGNING = new Step("=======Signing transaction.=========");
+        private final Step COLLECTING = new Step("======Collecting counterparty signature.========") {
             @Override
             public ProgressTracker childProgressTracker() {
                 return CollectSignaturesFlow.Companion.tracker();
@@ -78,7 +84,7 @@ public class RefuelFeeFlow {
         @Suspendable
         @Override
         public Void call() throws FlowException {
-
+            Instant currentTime = getServiceHub().getClock().instant();
             // step 1: we get the counterparty identity
             CordaX500Name x500Name = CordaX500Name.parse("O=Supplier,L=Dusserdorf,C=DE");
             Party receiver = getServiceHub().getIdentityService().wellKnownPartyFromX500Name(x500Name);
@@ -126,9 +132,22 @@ public class RefuelFeeFlow {
             // Obtaining the counterparty's signature.
 //            SignedTransaction fullySignedTx = subFlow(new CollectSignaturesFlow(
 //                    signedTx, ImmutableList.of(otherpartySession), CollectSignaturesFlow.tracker()));
-
             // Finalising the transaction.
-          subFlow(new SignTxFlow(otherPartySession, SignTransactionFlow.Companion.tracker()));
+           subFlow(new SignTxFlow(otherPartySession, SignTransactionFlow.Companion.tracker()));
+
+
+            Instant endTime = getServiceHub().getClock().instant();
+            Duration between = Duration.between(currentTime, endTime);
+            System.out.println("==========The process for RefuelFeeFlow cost "+between+"=============");
+            String fileName = "D:\\ubuntu\\Turnover-Box-Chain\\Refuel.txt";
+            try {
+                Files.write(
+                    Paths.get(fileName),
+                    (between.toString()+System.lineSeparator()).getBytes(), StandardOpenOption.APPEND);
+                } catch (IOException e) {
+            e.printStackTrace();
+            }
+
             return null;
         }
     }// end of the initiator
@@ -158,7 +177,8 @@ public class RefuelFeeFlow {
         }
         @Suspendable
         @Override
-        public SignedTransaction call() throws FlowException {
+            public SignedTransaction call() throws FlowException {
+
             // STEP1> Wait for a trade request to come in from the other party.
             progressTracker.setCurrentStep(RECEIVING);
             List<StateAndRef<Box>> boxesToSettle =  subFlow(new ReceiveStateAndRefFlow<>(otherPartySession));
@@ -166,11 +186,6 @@ public class RefuelFeeFlow {
             Helper.LenderInfo OperatorInfo = tempInfo.unwrap(data -> data);
 
             // STEP2> CONFIRMING
-            //Scanner scanner = new Scanner( System.in );
-            // System.out.println("\n If it is what you want or not, pls Enter(Y/N) \n");
-            //String input =  scanner.nextLine();
-            //if(!input.equalsIgnoreCase("Y"))
-            //throw new NotFoundException("Supplier denies the proposal "+ input);
 
             //STEP 3> to check whether the hassupplier has enough money
             // final Amount<Currency> cashBalance = getCashBalance(getServiceHub(), OperatorInfo.amount.getToken());
@@ -181,17 +196,35 @@ public class RefuelFeeFlow {
                         "Proposer has only %s but needs %s to settle.", cashBalance, OperatorInfo.amount));
             }
 
-            // Stage 4. Create a transaction builder. Add the settle command and input Boxes to be transfered.
+            // STEP 4. Create a transaction builder. Add the settle command and input Boxes to be transfered.
             progressTracker.setCurrentStep(BUILDING);
             List<PublicKey> requiredSigners = ImmutableList.of(getOurIdentity().getOwningKey(), otherPartySession.getCounterparty().getOwningKey());
             final Party notary = getServiceHub().getNetworkMapCache().getNotaryIdentities().get(0);
-            final TransactionBuilder txBuilder = new TransactionBuilder();
+            TransactionBuilder txBuilder = new TransactionBuilder();
             txBuilder.setNotary(notary);
 
+            // Stage 5. Get some cash from the vault and add a spend to our transaction builder.
+            PublicKey otherkey =  otherPartySession.getCounterparty().getOwningKey();
+            AbstractParty to = getServiceHub().getIdentityService().partyFromKey(otherkey);
+            /*
+            A Pair of the same transaction builder passed in as tx,
+            and the list of keys that need to sign the resulting transaction for it to be valid.
+             */
+            Pair<TransactionBuilder, List<PublicKey>> temp  = Cash.generateSpend(
+                    getServiceHub(),
+                    txBuilder,
+                    OperatorInfo.amount,
+                    getOurIdentityAndCert(),
+                    to,
+                    Collections.emptySet());
+            List<PublicKey> cashSigningPubKeys  = temp.component2();
+            txBuilder = temp.component1();
+
+            // add the box asset
             Iterator<StateAndRef<Box>> it;
             it = boxesToSettle.iterator();
             final Command cmdSettle = new Command<>(new AddBoxContract.Commands.Transfer(), requiredSigners);
-            while(it.hasNext() ) {
+            while(it.hasNext()) {
                 StateAndRef<Box> boxToSettle = it.next();
                 txBuilder.addInputState(boxToSettle);
             }
@@ -203,39 +236,33 @@ public class RefuelFeeFlow {
                 txBuilder.addOutputState(opState,AddBox_Contract_ID);
             }
             txBuilder.addOutputState(supplierState, AddBox_Contract_ID)
-                     .addCommand(cmdSettle).addCommand(new Command<>(new RechargeContract.Commands.Transfer(),requiredSigners));
-            Instant currentTime = getServiceHub().getClock().instant();
-            // Stage 5. Get some cash from the vault and add a spend to our transaction builder.
-            PublicKey okey =  otherPartySession.getCounterparty().getOwningKey();
-            AbstractParty to = getServiceHub().getIdentityService().partyFromKey(okey);
-            final  List<PublicKey> cashSigningPubKeys =Cash.generateSpend(
-                    getServiceHub(),
-                    txBuilder,
-                    OperatorInfo.amount,
-                    to,
-                    Collections.emptySet()).getSecond();
+                    .addCommand(cmdSettle).addCommand(new Command<>(new RechargeContract.Commands.Transfer(),requiredSigners));
 
-            SignedTransaction partSignedTx = getServiceHub().signInitialTransaction(txBuilder, cashSigningPubKeys);
+            //setting the command
+            cashSigningPubKeys.add(getOurIdentity().getOwningKey());
+            SignedTransaction partSignedTx = getServiceHub().signInitialTransaction(txBuilder,
+                    cashSigningPubKeys);
+
             txBuilder.verify(getServiceHub());
             //tx.setTimeWindow(currentTime, 30.seconds)
             progressTracker.setCurrentStep(SIGNING);
             // STEP 6: Sync up confidential identities in the transaction with our counterparty
             subFlow(new IdentitySyncFlow.Send(otherPartySession, txBuilder.toWireTransaction(getServiceHub())));
+
             // Send the signed transaction to the Operator, who must then sign it themselves and commit
             // it to the ledger by sending it to the notary.
             progressTracker.setCurrentStep(COLLECTING_SIGNATURES);
-            SignedTransaction operatorSignature = subFlow(new CollectSignaturesFlow(partSignedTx, ImmutableList.of(otherPartySession)));
+            SignedTransaction operatorSignature = subFlow(new CollectSignaturesFlow(partSignedTx,
+                    ImmutableList.of(otherPartySession)));
             //SignedTransaction twiceSignedTx = operatorSignature. (partSignedTx);
 
             // Notarise and record the transaction.
-            progressTracker.setCurrentStep(RECORDING);
+           // progressTracker.setCurrentStep(RECORDING);
             subFlow(new FinalityFlow(operatorSignature));
 //            @Suspendable
 //            private assembleSharedTX (StateAndRef<Box> assetForSale, tradeRequest: SellerTradeInfo, buyerAnonymousIdentity: PartyAndCertificate): SharedTx {
 //                val ptx = TransactionBuilder(notary)
-            Instant endTime = getServiceHub().getClock().instant();
-            Duration between = Duration.between(currentTime, endTime);
-            System.out.println("==========The process for RefuelFeeFlow cost "+between+"=============");
+
             return null;
         }
     }

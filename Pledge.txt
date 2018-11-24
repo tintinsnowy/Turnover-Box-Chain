@@ -1,0 +1,17 @@
+start RefuelFeeFlow amount: 1 EUR, numDemand: 1, productType: normaltype
+start RefuelFeeFlow amount: 1 EUR, numDemand: 120, productType: normaltype
+start PledgeFlow amount: 2 EUR, numDemand: 1, productType: normaltype, counterParty: "Distributor"
+start PledgeFlow amount: 40 EUR, numDemand: 20, productType: normaltype, counterParty: "Retailer"
+start PledgeFlow amount: 2 EUR, numDemand: 1, productType: normaltype, counterParty: "Operator"
+start AddBoxFlow productType: normaltype, num: 200
+start AddBoxFlow productType:normaltype, num: 1.5
+start AddBoxFlow productType: special, num: 3
+start RechargeFlow  amount: 200 EUR, theParty: "O=Supplier,L=Dusserdorf,C=DE"
+start RechargeFlow  amount: 195 EUR, theParty: "O=Distributor,L=Dusserdorf,C=DE"
+start RechargeFlow  amount: 195 EUR, theParty: "O=Retailer,L=Aachen,C=DE"
+https://stackoverflow.com/questions/49294406/what-is-the-syntax-for-corda-crash-shell-using-the-run-command
+run vaultQuery contractStateType: net.corda.finance.contracts.asset.Cash$State
+run vaultQuery contractStateType: com.template.Box
+run vaultQueryByCriteria
+start RechargeFlow  amount: 63 EUR, theParty: "O=Supplier,L=Dusserdorf,C=DE"
+h2port : 11000

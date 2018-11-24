@@ -26,27 +26,21 @@ import static net.corda.core.contracts.ContractsDSL.requireThat;
 import static net.corda.finance.Currencies.EUR;
 import static net.corda.finance.contracts.GetBalances.getCashBalance;
 
-public class RechargeFlow {
+public class DepositFlow {
 
 // the partners submit the RechargeFlow
     @InitiatingFlow
     @StartableByRPC
     public static class RechargeInitiator extends FlowLogic<Void> {
         private Amount<Currency> amount;
-        private AbstractParty theParty;// the Party which deposits.
-        //private Party otherParty;
+        private AbstractParty theParty;// the Party which deposits
         /**
          * The progress tracker provides checkpoints indicating the progress of the flow to observers.
          */
-
         private final ProgressTracker.Step INITIALISING = new ProgressTracker.Step("Initialising the transaction...");
-
         private final ProgressTracker.Step BUILDING = new ProgressTracker.Step("Building the tx...");
-
         private final ProgressTracker.Step SIGNING = new ProgressTracker.Step("Signing the tx...");
-
         private final ProgressTracker.Step VERIFY = new ProgressTracker.Step("Verifing the tx...") {
-
             @Nullable
             @Override
             public ProgressTracker childProgressTracker() {
@@ -158,18 +152,15 @@ public class RechargeFlow {
                         require.using("The Recharge value can't be under 0.", iou.getAmount().getQuantity()> 0);
                         System.out.printf( "If you have received the transfer from %s, pls enter: Y; otherwise N:\n",
                                 ((Cash.State) output).component2().toString() );
-
                         String input =  scanner.nextLine();
                         require.using("The Transaction is denied by the Operator: "+input,  input.equalsIgnoreCase("Y"));
                         return null;
                     });
                 }
             }
-
             subFlow(new SignTxFlow(counterpartySession, SignTransactionFlow.Companion.tracker()));
 
             return null;
         }//end of the void call()
     }
-
 }

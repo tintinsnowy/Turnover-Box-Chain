@@ -16,7 +16,13 @@ import net.corda.core.utilities.ProgressTracker.Step;
 import net.corda.core.utilities.UntrustworthyData;
 import net.corda.finance.contracts.asset.Cash;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.security.PublicKey;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.*;
 
 import static com.template.AddBoxContract.AddBox_Contract_ID;
@@ -28,6 +34,7 @@ public class PledgeFlow {
     /**
      * The RefuelFeeFlow should setup by the Operator
      */
+
     @InitiatingFlow
     @StartableByRPC
     public static class PledgeInitiator extends FlowLogic<Void> {
@@ -36,6 +43,7 @@ public class PledgeFlow {
         private final long numDemand;  // the number of ProductType x should be traded
         private final String productType;
         private final Party counterParty;
+
         /**
          * The progress tracker provides checkpoints indicating the progress of the flow to observers.
          */
@@ -46,17 +54,17 @@ public class PledgeFlow {
             this.counterParty = counterParty;
         }
 
-        private final Step AWAITING_PROPOSAL = new Step("======Setup PROPOSAL from Operator======");
+        private final Step AWAITING_PROPOSAL = new Step("====== Setup PROPOSAL from box owners======");
         private final Step RECEIVING = new Step("======The Supplier(Box borrower) RECEIVED!======");
         private final Step BUILDING = new Step("======Building and verifying transaction.======");
         private final Step SIGNING = new Step("=======Signing transaction.=======");
-        private final Step COLLECTING = new Step("++Collecting counterparty signature.") {
+        private final Step COLLECTING = new Step("=======Collecting counterparty signature.=======") {
             @Override
             public ProgressTracker childProgressTracker() {
                 return CollectSignaturesFlow.Companion.tracker();
             }
         };
-        private final Step FINALISING = new Step("++Finalising transaction.") {
+        private final Step FINALISING = new Step("=======Finalising transaction.=======") {
             @Override
             public ProgressTracker childProgressTracker() {
                 return FinalityFlow.Companion.tracker();
@@ -132,7 +140,7 @@ public class PledgeFlow {
     }// end of the initiator
 
     @InitiatedBy(PledgeInitiator.class)
-/**
+    /**
  The flow is annotated with InitiatedBy(IOUFlow.class),
  which means that your node will invoke IOUFlowResponder.call
  when it receives a message from a instance of Initiator running on another node
@@ -150,6 +158,7 @@ public class PledgeFlow {
         private final ProgressTracker progressTracker = new ProgressTracker(
                 RECEIVING , BUILDING, SIGNING, COLLECTING_SIGNATURES,RECORDING //FINALISING
         );
+
         @Override
         public ProgressTracker getProgressTracker() {
             return progressTracker;
@@ -157,8 +166,11 @@ public class PledgeFlow {
         @Suspendable
         @Override
         public SignedTransaction call() throws FlowException {
+            Instant currentTime = getServiceHub().getClock().instant();
+
             // STEP1> Wait for a trade request to come in from the other party.
             progressTracker.setCurrentStep(RECEIVING);
+
             List<StateAndRef<Box>> boxesToSettle =  subFlow(new ReceiveStateAndRefFlow<>(otherPartySession));
             UntrustworthyData<Helper.LenderInfo> tempInfo = otherPartySession.receive(Helper.LenderInfo.class);
             Helper.LenderInfo OperatorInfo = tempInfo.unwrap(data -> data);
@@ -166,16 +178,11 @@ public class PledgeFlow {
             // STEP2> CONFIRMING
             System.out.println(" the size of Boxes: "+ boxesToSettle.get(0).getState().getData().getProductType()+
                     " is " + boxesToSettle.size());
-            //Scanner scanner = new Scanner( System.in );
-            // System.out.println("\n If it is what you want or not, pls Enter(Y/N) \n");
-            //String input =  scanner.nextLine();
-            //if(!input.equalsIgnoreCase("Y"))
-            //throw new NotFoundException("Supplier denies the proposal "+ input);
 
             //STEP 3> to check whether the hassupplier has enough money
             // final Amount<Currency> cashBalance = getCashBalance(getServiceHub(), OperatorInfo.amount.getToken());
             final Amount<Currency> cashBalance = getCashBalance(getServiceHub(), OperatorInfo.amount.getToken());
-            System.out.println("\n " + cashBalance.toString());
+            System.out.println("There is " + cashBalance.toString());
             if (cashBalance.getQuantity() < OperatorInfo.amount.getQuantity()) {
                 throw new FlowException(String.format(
                         "Proposer has only %s but needs %s to settle.", cashBalance, OperatorInfo.amount));
@@ -212,13 +219,13 @@ public class PledgeFlow {
                     getServiceHub(),
                     txBuilder,
                     OperatorInfo.amount,
+                    getOurIdentityAndCert(),
                     to,
                     Collections.emptySet()).getSecond();
 
             SignedTransaction partSignedTx = getServiceHub().signInitialTransaction(txBuilder, cashSigningPubKeys);
             txBuilder.verify(getServiceHub());
 
-            //currentTime = ServiceHub.clock.instant();
             //tx.setTimeWindow(currentTime, 30.seconds)
             progressTracker.setCurrentStep(SIGNING);
             // STEP 6: Sync up confidential identities in the transaction with our counterparty
@@ -235,7 +242,19 @@ public class PledgeFlow {
 //            @Suspendable
 //            private assembleSharedTX (StateAndRef<Box> assetForSale, tradeRequest: SellerTradeInfo, buyerAnonymousIdentity: PartyAndCertificate): SharedTx {
 //                val ptx = TransactionBuilder(notary)
+            Instant endTime = getServiceHub().getClock().instant();
+            Duration between = Duration.between(currentTime, endTime);
+            String contentToAppend = "==========The process for PledgeFlow cost "+between+"=============\n";
+            System.out.println(contentToAppend);
 
+            String fileName = "D:\\ubuntu\\Turnover-Box-Chain\\Pledge.txt";
+            try {
+                Files.write(
+                        Paths.get(fileName),
+                        (between.toString()+System.lineSeparator()).getBytes(), StandardOpenOption.APPEND);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             return null;
         }
     }
