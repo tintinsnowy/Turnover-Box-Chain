@@ -21,17 +21,17 @@ import java.util.Currency;
 import java.util.List;
 import java.util.Scanner;
 
-import static com.template.RechargeContract.Recharge_Contract_ID;
+import static com.template.DepositContract.Deposit_Contract_ID;
 import static net.corda.core.contracts.ContractsDSL.requireThat;
 import static net.corda.finance.Currencies.EUR;
 import static net.corda.finance.contracts.GetBalances.getCashBalance;
 
 public class DepositFlow {
 
-// the partners submit the RechargeFlow
+// the partners submit the DepositFlow
     @InitiatingFlow
     @StartableByRPC
-    public static class RechargeInitiator extends FlowLogic<Void> {
+    public static class DepositInitiator extends FlowLogic<Void> {
         private Amount<Currency> amount;
         private AbstractParty theParty;// the Party which deposits
         /**
@@ -66,7 +66,7 @@ public class DepositFlow {
             return progressTracker;
         }
 
-        public RechargeInitiator(Amount<Currency>amount, AbstractParty theParty) {
+        public DepositInitiator(Amount<Currency>amount, AbstractParty theParty) {
             this.amount = amount;
             this.theParty = theParty;
             //this.otherParty = otherParty;
@@ -85,7 +85,7 @@ public class DepositFlow {
             // I guess the PartyAndReference used forencryto
             PartyAndReference issuer = getOurIdentity().ref(OpaqueBytes.of((theParty.getOwningKey() + amount.toString()).getBytes()));
             Cash.State outputState = new Cash.State(issuer, amount, theParty);
-            //StateAndContract outputContractAndState = new StateAndContract(outputState, RechargeContract.Recharge_Contract_ID);
+            //StateAndContract outputContractAndState = new StateAndContract(outputState, DepositContract.Deposit_Contract_ID);
 
             CordaX500Name x500Name = CordaX500Name.parse("O=Operator,L=Cologne,C=DE");
             // or using getPeerByLegalName
@@ -94,8 +94,8 @@ public class DepositFlow {
 
             //Step 2 Building: we add the items to the builder.´´´´´´´´´´´´´´´´´´´´´´´here to chage 
             progressTracker.setCurrentStep(BUILDING);
-            txBuilder.addOutputState(outputState, Recharge_Contract_ID)
-                     .addCommand(new RechargeContract.Commands.Issue(), requiredSigners);
+            txBuilder.addOutputState(outputState, Deposit_Contract_ID)
+                     .addCommand(new DepositContract.Commands.Issue(), requiredSigners);
 
             //Step3 Verifying the transaction.
             txBuilder.verify(getServiceHub());
@@ -124,11 +124,11 @@ public class DepositFlow {
     }
 
 
-    @InitiatedBy(RechargeInitiator.class)
-    public static class RechargeResponder extends FlowLogic<Void> {
+    @InitiatedBy(DepositInitiator.class)
+    public static class DepositResponder extends FlowLogic<Void> {
         private FlowSession counterpartySession;
 
-        public RechargeResponder(FlowSession counterpartySession) {
+        public DepositResponder(FlowSession counterpartySession) {
             this.counterpartySession = counterpartySession;
         }
         /**
@@ -147,9 +147,9 @@ public class DepositFlow {
                     Scanner scanner = new Scanner( System.in );
                     requireThat(require -> {
                         ContractState output = stx.getTx().getOutputs().get(0).getData();
-                        require.using("This must be an Recharge transaction.", output instanceof Cash.State);
+                        require.using("This must be an Deposit transaction.", output instanceof Cash.State);
                         Cash.State iou = (Cash.State) output;
-                        require.using("The Recharge value can't be under 0.", iou.getAmount().getQuantity()> 0);
+                        require.using("The Deposit value can't be under 0.", iou.getAmount().getQuantity()> 0);
                         System.out.printf( "If you have received the transfer from %s, pls enter: Y; otherwise N:\n",
                                 ((Cash.State) output).component2().toString() );
                         String input =  scanner.nextLine();

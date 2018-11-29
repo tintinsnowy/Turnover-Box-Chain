@@ -236,9 +236,9 @@ public class RefuelFeeFlow {
                 txBuilder.addOutputState(opState,AddBox_Contract_ID);
             }
             txBuilder.addOutputState(supplierState, AddBox_Contract_ID)
-                    .addCommand(cmdSettle).addCommand(new Command<>(new RechargeContract.Commands.Transfer(),requiredSigners));
+                    .addCommand(cmdSettle).addCommand(new Command<>(new DepositContract.Commands.Transfer(),requiredSigners));
 
-            //setting the command
+            //setiing
             cashSigningPubKeys.add(getOurIdentity().getOwningKey());
             SignedTransaction partSignedTx = getServiceHub().signInitialTransaction(txBuilder,
                     cashSigningPubKeys);

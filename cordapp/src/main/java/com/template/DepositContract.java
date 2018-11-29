@@ -18,9 +18,9 @@ import static net.corda.core.contracts.ContractsDSL.requireSingleCommand;
 import static net.corda.core.contracts.ContractsDSL.requireThat;
 
 
-public class RechargeContract implements Contract {
+public class DepositContract implements Contract {
 
-    public static final String Recharge_Contract_ID = "com.template.RechargeContract";
+    public static final String Deposit_Contract_ID = "com.template.DepositContract";
 
     // Our Create command.
     public interface Commands extends CommandData {
@@ -41,14 +41,14 @@ public class RechargeContract implements Contract {
     public void verify(LedgerTransaction tx) {
         //throw new UnsupportedOperationException();
         final CommandWithParties<Commands> command = requireSingleCommand(tx.getCommands(), Commands.class);
-        final RechargeContract.Commands commandData  = command.getValue();
+        final DepositContract.Commands commandData  = command.getValue();
         final Set<PublicKey> setOfSigners = new HashSet<>(command.getSigners());
 
-        if (commandData instanceof RechargeContract.Commands.Issue) {
+        if (commandData instanceof DepositContract.Commands.Issue) {
             verifyIssue(tx, setOfSigners);
-        } else if (commandData instanceof RechargeContract.Commands.Transfer) {
+        } else if (commandData instanceof DepositContract.Commands.Transfer) {
             verifyTransfer(tx, setOfSigners);
-        } else if (commandData instanceof RechargeContract.Commands.Settle) {
+        } else if (commandData instanceof DepositContract.Commands.Settle) {
             verifySettle(tx, setOfSigners);
         } else {
             throw new IllegalArgumentException("Unrecognised command.");
@@ -57,7 +57,6 @@ public class RechargeContract implements Contract {
 
     private void verifyTransfer(LedgerTransaction tx, Set<PublicKey> signers) {
         final Cash.State out = tx.inputsOfType(Cash.State.class).get(0);
-        System.out.println("\n we are confirming Cash from "+ out.getOwner());
 
     }
 
@@ -73,7 +72,7 @@ public class RechargeContract implements Contract {
             pt.setCurrentStep(STEP1);
             check.using("Cannot reissue a.transcation", tx.getInputs().isEmpty());
             pt.setCurrentStep(STEP2);
-            check.using("There should be one output state of type RechargeContract.", tx.getOutputs().size() == 1);
+            check.using("There should be one output state of type DepositContract.", tx.getOutputs().size() == 1);
             // should Constrains that the contractor should be the box operators
             final Cash.State out = tx.outputsOfType(Cash.State.class).get(0);
             final AbstractParty owner = out.getOwner();
